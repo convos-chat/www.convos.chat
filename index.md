@@ -4,13 +4,13 @@ description: A multiuser chat web app for IRC. Always online, supports video, cu
 image: /screenshots/2020-05-28-convos-chat.jpg
 ---
 
-<div class="hero-wrapper is-before-content">
+<div class="hero--wrapper is-before-content">
   <header class="hero">
-    <div class="hero--text">
-      <div class="hero--header hidden-sm"><img src="/images/convos-light.png" alt="Convos"></div>
-      <div class="hero--tagline">&mdash; A better chat experience</div>
-      <div class="hero--body">Convos is the simplest way to use IRC and it is always online.</div>
-      <div class="hero--footer"><a href="#instant-demo" class="btn"><i class="fas fa-sign-in-alt"></i> Try the demo</a></div>
+    <div class="hero__text">
+      <div class="hero__header hidden-sm"><img src="/images/convos-light.png" alt="Convos"></div>
+      <div class="hero__tagline">&mdash; A better chat experience</div>
+      <div class="hero__body">Convos is the simplest way to use IRC and it is always online.</div>
+      <div class="hero__footer"><a href="#instant-demo" class="btn"><i class="fas fa-sign-in-alt"></i> Try the demo</a></div>
     </div>
     <a href="#instant-demo" class="hero--media">
       <img src="/screenshots/2020-05-28-convos-chat.jpg" alt="Picture of Convos conversation">
@@ -141,7 +141,7 @@ article > h2 {
   text-align: center;
 }
 
-.hero-wrapper {
+.hero--wrapper {
   margin-bottom: 2rem;
 }
 
@@ -190,7 +190,7 @@ article > h2 {
 }
 
 @media (min-width: 800px) {
-  .hero-wrapper {
+  .hero--wrapper {
     margin-bottom: 4rem;
   }
 
@@ -213,7 +213,7 @@ article > h2 {
 }
 
 @media (min-width: 1100px) {
-  .hero-wrapper {
+  .hero--wrapper {
     margin-bottom: 8rem;
   }
 
