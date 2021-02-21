@@ -43,7 +43,7 @@ exist, so you can name the file whatever you want.
 N.B. : It is important to name your color scheme "light", "dark" or "auto" because it is linked to [css media prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 The rest of the file should mostly contain variable definitions.
-[github.com/convos-chat/convos/blob/master/assets/sass/_variables.scss](https://github.com/Nordaaker/convos/blob/master/assets/sass/_variables.scss)
+[github.com/convos-chat/convos/blob/master/assets/sass/_variables.scss](https://github.com/convos-chat/convos/blob/master/assets/sass/_variables.scss)
 shows the available variables that you can override. Here is an example of a
 custom theme that will look the same as the default "Convos" light theme, but
 will have a much bigger font size:

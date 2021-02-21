@@ -48,7 +48,7 @@ screen. Convos can be installed on your home server,
 <div class="text-center">
   <a href="https://snapcraft.io/convos"><img src="https://snapcraft.io/convos/badge.svg" alt="snapcraft.io"></a>
   <a href="https://hub.docker.com/r/convos/convos"><img src="https://img.shields.io/docker/build/nordaaker/convos" alt="Docker"></a>
-  <!-- a href="https://travis-ci.org/convos-chat/convos"><img src="https://travis-ci.org/Nordaaker/convos.svg?branch=master" alt="Build status"></a -->
+  <!-- a href="https://travis-ci.org/convos-chat/convos"><img src="https://travis-ci.org/convos-chat/convos.svg?branch=master" alt="Build status"></a -->
   <a href="https://github.com/convos-chat/convos/issues"><img src="https://img.shields.io/github/issues/nordaaker/convos" alt="Issues"></a>
 </div>
 
