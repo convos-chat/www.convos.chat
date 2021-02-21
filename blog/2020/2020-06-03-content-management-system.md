@@ -25,7 +25,7 @@ The custom web page can be created by creating some directories and files in
 
 * __`$CONVOS_HOME/content/index.md`__ will override the index page (`/`) of
   your Convos installation. "[/](/)" does normally just redirect to
-  [/login](/login) or [/chat](/chat), so overriding this page is completely
+  [/login](https://demo.convos.chat/login) or [/chat](/chat), so overriding this page is completely
   fine.
 * Any file that ends with ".md" in the __`$CONVOS_HOME/content/doc/`__
   directory will be available under the [/doc](/doc) path. A special "index.md"
