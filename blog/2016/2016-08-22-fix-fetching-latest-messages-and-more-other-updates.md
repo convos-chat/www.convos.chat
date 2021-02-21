@@ -3,20 +3,20 @@ title: Fixed fetching latest messages on websocket reconnect and other juicy upd
 author: Jan Henning Thorsen
 ---
 
-The [stable](https://github.com/Nordaaker/convos/tree/stable) branch has now
+The [stable](https://github.com/convos-chat/convos/tree/stable) branch has now
 been updated with major bugfixes:
 
 ## Server didn't like my code regarding "unread" count
 
 <!--more-->
 
-* [8b119352741074cf75f53b8973172f5cd7ed7cdd](https://github.com/Nordaaker/convos/commit/8b119352741074cf75f53b8973172f5cd7ed7cdd)
+* [8b119352741074cf75f53b8973172f5cd7ed7cdd](https://github.com/convos-chat/convos/commit/8b119352741074cf75f53b8973172f5cd7ed7cdd)
 * Author: Jan Henning Thorsen <jhthorsen@cpan.org>
 * Date: Mon Aug 22 14:57:12 2016 +0200
 
 The "unread" count for the dialogs are now calculated on server side, instead
 of in the browser. This is a far better solution than what was introduced in
-[be445819cf01d22095b63e8a6dc10f3999c03d54](https://github.com/Nordaaker/convos/commit/be445819cf01d22095b63e8a6dc10f3999c03d54).
+[be445819cf01d22095b63e8a6dc10f3999c03d54](https://github.com/convos-chat/convos/commit/be445819cf01d22095b63e8a6dc10f3999c03d54).
 The problem with the previous solution was even worse than what I expected:
 Seems like fetching participants and messages for a bunch of dialogs results
 in either the server or browser to drop some of the requests. I could be
@@ -29,7 +29,7 @@ javascript lazy loads the messages from the backend when a dialog goes from
 
 ## Participants where all over place
 
-* [6d54a42a7f9d9e6cc2f268b072a19deae197514e](https://github.com/Nordaaker/convos/commit/6d54a42a7f9d9e6cc2f268b072a19deae197514e)
+* [6d54a42a7f9d9e6cc2f268b072a19deae197514e](https://github.com/convos-chat/convos/commit/6d54a42a7f9d9e6cc2f268b072a19deae197514e)
 * Author: Jan Henning Thorsen <jhthorsen@cpan.org>
 * Date: Mon Aug 22 19:50:10 2016 +0200
 
@@ -44,7 +44,7 @@ framework for the vuejs code.
 
 ## Send button to /dev/null
 
-* [142a39f4c519b1c319ab23117fdbd88e7f4b13a9](https://github.com/Nordaaker/convos/commit/142a39f4c519b1c319ab23117fdbd88e7f4b13a9)
+* [142a39f4c519b1c319ab23117fdbd88e7f4b13a9](https://github.com/convos-chat/convos/commit/142a39f4c519b1c319ab23117fdbd88e7f4b13a9)
 * Author: Jan Henning Thorsen <jhthorsen@cpan.org>
 * Date: Sun Aug 21 14:44:00 2016 +0200
 
@@ -54,7 +54,7 @@ now.
 ## Keep sending us those issue reports
 
 [Denis Brækhus](https://github.com/denisbr) has been the first person to open
-an issue regarding the new codebase on [github](https://github.com/Nordaaker/convos/issues/266).
+an issue regarding the new codebase on [github](https://github.com/convos-chat/convos/issues/266).
 This is much appreciated! He also posted a question on
 [Twitter](https://twitter.com/denisb/status/767644051432673280):
 

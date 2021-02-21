@@ -3,7 +3,7 @@ title: Convos version 0.99_24 is out
 author: Jan Henning Thorsen
 ---
 
-Version [0.99_24](https://github.com/Nordaaker/convos/tree/stable/Changes) is
+Version [0.99_24](https://github.com/convos-chat/convos/tree/stable/Changes) is
 out in the wild. This release feature some cool changes in the user interface,
 but also some important bug fixes.
 
@@ -22,7 +22,7 @@ find the most popular rooms on the current server.
 ## You can now send any IRC command
 
 There used to be a limitation to which IRC commands you could send. This
-limitation is now [removed](https://github.com/Nordaaker/convos/issues/317).
+limitation is now [removed](https://github.com/convos-chat/convos/issues/317).
 
 Convos still handle some commands with custom logic (such as JOIN, WHOIS,
 ...), but other commands (such as WHOWAS) is now sent and received as raw IRC

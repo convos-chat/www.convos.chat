@@ -22,14 +22,14 @@ later.
 
 ## Theme setup
 
-The [_themes.scss](https://github.com/Nordaaker/convos/blob/1.01/assets/sass/_themes.scss)
+The [_themes.scss](https://github.com/convos-chat/convos/blob/1.01/assets/sass/_themes.scss)
 file is used to define all the different themes. When writing this post, there
 are two themes defined:
 
-1. The "[light](https://github.com/Nordaaker/convos/blob/1.01/assets/sass/themes/_light.scss)"
+1. The "[light](https://github.com/convos-chat/convos/blob/1.01/assets/sass/themes/_light.scss)"
    theme is the default theme for Convos and acts as a base for other themes.
 
-2. The "[dark](https://github.com/Nordaaker/convos/blob/1.01/assets/sass/themes/_dark.scss)"
+2. The "[dark](https://github.com/convos-chat/convos/blob/1.01/assets/sass/themes/_dark.scss)"
    theme is default if your OS and browser is configured to "dark mode".
 
 Either of the themes can be selected in "settings":
@@ -39,15 +39,15 @@ Either of the themes can be selected in "settings":
 ## Customize the default colors
 
 Since you're in control of the source code, you can always change
-[_light.scss](https://github.com/Nordaaker/convos/blob/1.01/assets/sass/themes/_light.scss)
+[_light.scss](https://github.com/convos-chat/convos/blob/1.01/assets/sass/themes/_light.scss)
 directly, but it is advised to create a new theme instead.
 
 A new theme can be defined by following these steps:
 
-1. Create a new (empty) file in [assets/sass/themes](https://github.com/Nordaaker/convos/tree/1.01/assets/sass/themes).
+1. Create a new (empty) file in [assets/sass/themes](https://github.com/convos-chat/convos/tree/1.01/assets/sass/themes).
    In this example we will call it `_blue.scss`.
 
-2. Edit [_themes.scss](https://github.com/Nordaaker/convos/blob/1.01/assets/sass/_themes.scss)
+2. Edit [_themes.scss](https://github.com/convos-chat/convos/blob/1.01/assets/sass/_themes.scss)
    and add a line after `@import 'themes/light';`, where you import the new theme:
 
        @import 'themes/dark';
@@ -56,7 +56,7 @@ A new theme can be defined by following these steps:
 
 To make the theme actually affect the layout, you have to fill `_blue.scss` with
 some overrides. Have a look at the
-[_light.scss](https://github.com/Nordaaker/convos/blob/1.01/assets/sass/themes/_light.scss)
+[_light.scss](https://github.com/convos-chat/convos/blob/1.01/assets/sass/themes/_light.scss)
 theme to see what you can override, but here is an example:
 
     :root {
@@ -81,7 +81,7 @@ The file should look like this afterwards:
     }
 
 In addition you have to make the theme available in the "settings" page.
-This is done by running the [latest version](https://github.com/Nordaaker/convos/issues/404)
+This is done by running the [latest version](https://github.com/convos-chat/convos/issues/404)
 of `t/production-resources.t`:
 
     prove -vl t/production-resources.t
@@ -106,7 +106,7 @@ After choosing a new theme, you can add it to you style:
 
 1. We recommend not starting to fiddle around with CSS selectors. If you want
    to style something that isn't defined as a variable, then please open an
-   [issue](https://github.com/Nordaaker/convos/issues) describing what you
+   [issue](https://github.com/convos-chat/convos/issues) describing what you
    want to customize.
 
 2. If you're making a dark theme, then extend the existing dark theme so you
@@ -118,7 +118,7 @@ After choosing a new theme, you can add it to you style:
         }
 
 3. Share your theme! If you make a new theme and want to contribute to the
-   project, then please open a [pull request](https://github.com/Nordaaker/convos/pulls).
+   project, then please open a [pull request](https://github.com/convos-chat/convos/pulls).
    When doing so, please upload a screenshot as well, so it's easier to see
    how it looks.
 

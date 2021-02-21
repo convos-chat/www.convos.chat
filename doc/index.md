@@ -40,7 +40,7 @@ either way you choose!
 You can join [#convos](irc://chat.freenode.net:6697/#convos) on
 [freenode.net](http://freenode.net/) for an interactive chat, send us a
 message on [twitter](https://twitter.com/convosby) or create an
-[issue](https://github.com/Nordaaker/convos/issues) on Github. If you're more
+[issue](https://github.com/convos-chat/convos/issues) on Github. If you're more
 of the email type, then send an email to
 <a href="mailto:contact@convos.chat">contact@convos.chat</a>.
 

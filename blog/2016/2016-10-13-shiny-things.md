@@ -6,7 +6,7 @@ author: Jan Henning Thorsen
 It's been a while since the last post, but that doesn't mean there aren't cool 
 things happening!
 
-Version [0.99_15](https://github.com/Nordaaker/convos/tree/stable) is just out
+Version [0.99_15](https://github.com/convos-chat/convos/tree/stable) is just out
 with a bunch of updates. Run the
 [install](/doc/start#quick-start-guide) command to get up and
 running!
@@ -48,5 +48,5 @@ will correctly track channel redirects.
 ## More?
 
 Want more details? Check out the
-[Changelog](https://github.com/Nordaaker/convos/blob/master/Changes), or come
+[Changelog](https://github.com/convos-chat/convos/blob/master/Changes), or come
 and [talk to us](/doc#get-in-touch).

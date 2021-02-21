@@ -8,13 +8,13 @@ IRC networks. We wanted to create the easiest user interface to keep in touch
 with our friends and fellow open source developers. Focusing on the chat
 experience is still the main focus, but we also see that it is important for
 our users to be able to tweak settings in a convenient way. Convos
-[2.00](https://github.com/Nordaaker/convos/blob/2.00/Changes#L3) addresses some
+[2.00](https://github.com/convos-chat/convos/blob/2.00/Changes#L3) addresses some
 of these needs.
 
 <!--more-->
 
 You can see a list of all the changes and bug fixes on
-[GitHub](https://github.com/Nordaaker/convos/blob/2.00/Changes#L3).
+[GitHub](https://github.com/convos-chat/convos/blob/2.00/Changes#L3).
 
 ## Administration user
 
@@ -53,7 +53,7 @@ configured on a settings page:
 
 [![Picture of Convos server settings](/screenshots/2019-11-24-server-settings.jpg)](/screenshots/2019-11-24-server-settings.jpg)
 
-Please do [let us know](https://github.com/Nordaaker/convos/issues) if you want
+Please do [let us know](https://github.com/convos-chat/convos/issues) if you want
 any other settings to be available on this screen.
 
 ## Forgotten password and invitation links
@@ -67,7 +67,7 @@ The invite code logic is completely replaced with an invite link in Convos 2.0.
 This link can be created by the Convos admin on the settings page This together
 with the "default connection URL" makes joining Convos incredible easy for new
 user. Also, the link is
-[unique](https://github.com/Nordaaker/convos/blob/2.00/t/web-register-invite-only.t)
+[unique](https://github.com/convos-chat/convos/blob/2.00/t/web-register-invite-only.t)
 for the invited user, making your Convos instance more secure.
 
 [![Picture of Convos invite and recover link](/screenshots/2019-11-24-invite-link.jpg)](/screenshots/2019-11-24-invite-link.jpg)
@@ -106,7 +106,7 @@ the settings.
 
 ## Moving onwards
 
-Next up will be the [2.01](https://github.com/Nordaaker/convos/milestone/12)
+Next up will be the [2.01](https://github.com/convos-chat/convos/milestone/12)
 release, where we focus on being able to share images and documents in your
 Convos chat. This is something I've wanted for a long, since it's very often
 I take a photo and would love to post it in a chat.

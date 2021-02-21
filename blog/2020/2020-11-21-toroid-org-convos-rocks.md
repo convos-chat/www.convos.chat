@@ -24,5 +24,5 @@ example of modern web development, it's fun to hack on, and it has friendly and
 responsive maintainers.
 
 Today was a Convos hackathon, and I took the opportunity to submit a few small
-[pull requests](https://github.com/Nordaaker/convos/pulls?q=author%3Aamenonsen),
+[pull requests](https://github.com/convos-chat/convos/pulls?q=author%3Aamenonsen),
 which were reviewed and merged promptly.

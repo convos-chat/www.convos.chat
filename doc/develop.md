@@ -20,10 +20,10 @@ JavaScript dependency tree is maintained using [pnpm](https://pnpm.js.org/).
 ## Getting the source code
 
 The first step is to clone the Convos repository. You can either do this
-directly on [github](https://github.com/nordaaker/convos) or by running the
+directly on [github](https://github.com/convos-chat/convos) or by running the
 command below:
 
-    git clone https://github.com/nordaaker/convos.git
+    git clone https://github.com/convos-chat/convos.git
 
 The command above will create a "convos" directory in the current working
 directory. The following steps need to be run from the project root, meaning
@@ -78,7 +78,7 @@ directories for changes and reload the web server automatically.
 
 ## Running tests
 
-Convos has [GitHub workflows](https://github.com/Nordaaker/convos/actions) set
+Convos has [GitHub workflows](https://github.com/convos-chat/convos/actions) set
 up to run automatic tests when pushing a commit. These tests can also be run
 locally:
 
@@ -128,44 +128,44 @@ start the [production](/doc/start#git-clone) version of Convos:
 
 * ./assets/
 
-  The [assets](https://github.com/nordaaker/convos/tree/master/assets)
+  The [assets](https://github.com/convos-chat/convos/tree/master/assets)
   directory contains all JavaScript and Sass files, which will be used to
   generate the public files. The conversion is done with
   [Mojolicious::Plugin::Webpack](/doc/Mojolicious/Plugin/Webpack).
 
 * ./cpanfile
 
-  The [cpanfile](https://github.com/nordaaker/convos/blob/master/cpanfile) is
+  The [cpanfile](https://github.com/convos-chat/convos/blob/master/cpanfile) is
   used to document all the requirements, while the `Makefile.PL` file is
   generated from the content of the cpanfile.
 
 * ./lib/
 
-  The [lib](https://github.com/nordaaker/convos/tree/master/lib) directory
+  The [lib](https://github.com/convos-chat/convos/tree/master/lib) directory
   contains all the Perl source code.
 
 * ./public
 
-  The [public](https://github.com/nordaaker/convos/tree/master/public)
+  The [public](https://github.com/convos-chat/convos/tree/master/public)
   directory contains fonts and images  which can be downloaded through the
   Convos web server.
 
 * ./script
 
-  The [script](https://github.com/nordaaker/convos/tree/master/script)
+  The [script](https://github.com/convos-chat/convos/tree/master/script)
   directory contains the main application file
-  ([convos](https://github.com/nordaaker/convos/blob/master/script/convos))
+  ([convos](https://github.com/convos-chat/convos/blob/master/script/convos))
   and helper scripts.  The important part here is that every file which has
   the executable bit set will be part of the final CPAN distribution.
 
 * ./t
 
-  The [t](https://github.com/nordaaker/convos/tree/master/t) directory
+  The [t](https://github.com/convos-chat/convos/tree/master/t) directory
   contains test files for the Perl code.
 
 * ./\_\_tests__
 
-  The [__tests__](https://github.com/nordaaker/convos/tree/master/__tests__)
+  The [__tests__](https://github.com/convos-chat/convos/tree/master/__tests__)
   directory contains test files for the JavaScript code.
 
 ## Convos frontend
@@ -190,9 +190,9 @@ with a thin logical layer inside the controllers:
 * [Convos::Controller::User](/doc/Convos/Controller/User)
 
 The main layout for the Svelte powered frontend is
-[/assets/App.svelte](https://github.com/Nordaaker/convos/blob/master/assets/App.svelte)
+[/assets/App.svelte](https://github.com/convos-chat/convos/blob/master/assets/App.svelte)
 and the routes are set up in
-[/assets/routes.js](https://github.com/Nordaaker/convos/blob/master/assets/routes.js).
+[/assets/routes.js](https://github.com/convos-chat/convos/blob/master/assets/routes.js).
 
 ## Convos core
 
@@ -224,7 +224,7 @@ Convos has an OpenAPI powered REST API. The specification is used to both
 generate Perl code for validation, and to generate documentation. Resources:
 
 * [Documentation](/api.html)
-* [Specification](https://github.com/nordaaker/convos/blob/master/public/convos-api.json)
+* [Specification](https://github.com/convos-chat/convos/blob/master/public/convos-api.json)
 * [OpenAPI](https://www.openapis.org/)
 * [Mojolicious::Plugin::OpenAPI](/doc/Mojolicious/Plugin/OpenAPI)
 
@@ -235,13 +235,13 @@ TODO: Need to document the WebSocket API as well.
 Any contribution is more than welcome! Examples: If you find typos on this web
 page or find something annoying, then please [tell us](/doc/#get-in-touch).
 
-We welcome [pull requests](https://github.com/nordaaker/convos/pulls), but any
+We welcome [pull requests](https://github.com/convos-chat/convos/pulls), but any
 form of patches are better than nothing. The pull request does not need to be
 complete either, but it is more likely to get merged if it includes tests and
 documentation updates.
 
-Check out [the issues](https://github.com/nordaaker/convos/issues) for open
+Check out [the issues](https://github.com/convos-chat/convos/issues) for open
 issues. Some of the issues are put into planned
-[milestones](https://github.com/Nordaaker/convos/milestones), but any of the
-[backlog](https://github.com/Nordaaker/convos/milestone/7) issues are for grabs
+[milestones](https://github.com/convos-chat/convos/milestones), but any of the
+[backlog](https://github.com/convos-chat/convos/milestone/7) issues are for grabs
 at any time.

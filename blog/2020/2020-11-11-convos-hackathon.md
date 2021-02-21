@@ -41,7 +41,7 @@ Don't know what to hack on, but interested in helping anyway? Maybe you can:
   [themes](https://convos.chat/blog/2020/6/14/create-your-own-theme-detailed-walkthrough),
   or extend the set of variables to enable your theme to be built.
 
-We also have open [issues](https://github.com/Nordaaker/convos/issues) and
-ideas in the [fridge](https://github.com/Nordaaker/convos/issues?q=milestone%3AFridge).
+We also have open [issues](https://github.com/convos-chat/convos/issues) and
+ideas in the [fridge](https://github.com/convos-chat/convos/issues?q=milestone%3AFridge).
 
 Looking forward to talking to you on the 21st!

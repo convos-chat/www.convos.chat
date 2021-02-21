@@ -26,7 +26,7 @@ ufw --force enable;
 # Get and install Convos
 useradd -M -U www
 mkdir /var/convos && chown www.www -R /var/convos
-mkdir -p /opt && cd /opt && git clone https://github.com/Nordaaker/convos.git
+mkdir -p /opt && cd /opt && git clone https://github.com/convos-chat/convos.git
 cd /opt/convos && perl ./script/convos install
 
 mkdir /var/convos/certs

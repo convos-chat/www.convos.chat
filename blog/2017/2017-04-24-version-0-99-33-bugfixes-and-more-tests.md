@@ -3,7 +3,7 @@ title: Convos version 0.99_33 is out with bugfixes
 author: Jan Henning Thorsen
 ---
 
-Version [0.99_33](https://github.com/Nordaaker/convos/tree/stable) has been
+Version [0.99_33](https://github.com/convos-chat/convos/tree/stable) has been
 released with a bunch of updates. Run the
 [install](/doc/start#quick-start-guide) command to get the
 latest version!
@@ -12,7 +12,7 @@ latest version!
 
 <!--more-->
 
-A Convos user [reported in](https://github.com/Nordaaker/convos/issues/334)
+A Convos user [reported in](https://github.com/convos-chat/convos/issues/334)
 that username/password was not handled correctly when you click "Save". The
 existing logic at the time was very complicated and therefor also very buggy.
 The idea was that the password submitted on web should not be sent back to the
@@ -24,7 +24,7 @@ And you do [protect](/doc/config#listen) Convos with HTTPS, right..?
 
 ## Online/offline state for private dialogs
 
-Version [0.99_31](https://github.com/Nordaaker/convos/blob/master/Changes) was
+Version [0.99_31](https://github.com/convos-chat/convos/blob/master/Changes) was
 released with a new method to detect if the user in a private dialog is online
 or not: Convos now uses the
 [ISON](https://tools.ietf.org/html/rfc2812#section-4.9) command instead of
@@ -41,7 +41,7 @@ online. This looks quite sane, but it does not seem like the IRC server
 returns the ISON reply in the same order as it is sent, so it's hard to track
 if the offline response was for "superman" or some other nick, before you have
 received all the replies. This logic is now improved in version
-[0.99_33](https://github.com/Nordaaker/convos/issues/336) and seems to work as
+[0.99_33](https://github.com/convos-chat/convos/issues/336) and seems to work as
 expected.
 
 I wonder if I have misunderstood something. Please

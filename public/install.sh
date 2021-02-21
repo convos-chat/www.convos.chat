@@ -1,6 +1,6 @@
 #!/bin/sh
-REPO="https://github.com/Nordaaker/convos.git";
-TAR_GZ="https://github.com/Nordaaker/convos/archive/stable.tar.gz";
+REPO="https://github.com/convos-chat/convos.git";
+TAR_GZ="https://github.com/convos-chat/convos/archive/stable.tar.gz";
 
 fetch_tar () {
   find_bin tar || return $?;

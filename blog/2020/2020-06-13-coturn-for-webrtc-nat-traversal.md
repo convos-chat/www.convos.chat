@@ -1,6 +1,6 @@
 ---
 title: Coturn for WebRTC NAT Traversal
-canonical: https://marcus.nordaaker.com/post/coturn-for-webrtc-nat-traversal/
+canonical: https://marcus.convos-chat.com/post/coturn-for-webrtc-nat-traversal/
 author: Marcus Ramberg
 ---
 

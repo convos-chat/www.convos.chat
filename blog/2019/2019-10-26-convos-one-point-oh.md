@@ -4,7 +4,7 @@ author: Jan Henning Thorsen
 ---
 
 It sure did take way too long time, but I've finally managed to release Convos
-[1.00](https://github.com/Nordaaker/convos/blob/1.00/Changes#L3).
+[1.00](https://github.com/convos-chat/convos/blob/1.00/Changes#L3).
 
 A new shiny tool for building webapps called [Svelte](https://svelte.dev) had a
 [major release](https://github.com/sveltejs/svelte/commit/7382a9f811c830502e96aaad7fad7976def93d22)
@@ -21,7 +21,7 @@ code will use CPU and render time.
 ## Highlights
 
 But enough with what made Convos more fun to develop. What is new for you, the
-user? You can see all the changes on [GitHub](https://github.com/Nordaaker/convos/blob/1.00/Changes#L3),
+user? You can see all the changes on [GitHub](https://github.com/convos-chat/convos/blob/1.00/Changes#L3),
 but here are some highlights:
 
 ### New sidebar
@@ -87,7 +87,7 @@ That is the reason why this plugin is no longer available.
 ## Moving onwards
 
 The next releases in Convos should be covered in different milestones. Check
-out the [1.01](https://github.com/Nordaaker/convos/milestone/9) milestone for
+out the [1.01](https://github.com/convos-chat/convos/milestone/9) milestone for
 planned tasks.
 
 Curious about Convos? Try out the [demo](http://demo.convos.chat) or

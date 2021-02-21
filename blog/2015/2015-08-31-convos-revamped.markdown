@@ -140,7 +140,7 @@ easier to follow the logic, the objects should have a clean separation between
 "backend storage" and Perl space, and the API should support hooks provided by
 third party plugins.
 
-The working draft can be seen in the [batcode](https://github.com/Nordaaker/convos/tree/batcode)
+The working draft can be seen in the [batcode](https://github.com/convos-chat/convos/tree/batcode)
 branch.
 
 ### One process
@@ -211,7 +211,7 @@ kind of "Backend" you have.
 
 ## Status of the revamped version
 
-The current [batcode](https://github.com/Nordaaker/convos/tree/batcode) branch
+The current [batcode](https://github.com/convos-chat/convos/tree/batcode) branch
 has a lot of the REST resources defined, implemented and tested, but there is
 still missing features such as no way to log out and no way to send/stream
 messages. The bottleneck now is however the frontend. We currently have no

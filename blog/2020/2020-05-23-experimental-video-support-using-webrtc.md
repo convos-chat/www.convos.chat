@@ -3,7 +3,7 @@ title: Video support in Convos v4.08
 author: Jan Henning Thorsen
 ---
 
-Convos [v4.08](https://github.com/Nordaaker/convos/blob/4.08/Changes#L3) is
+Convos [v4.08](https://github.com/convos-chat/convos/blob/4.08/Changes#L3) is
 fresh from the bakery, and this time we are proud to announce video support!
 
 <!--more-->
@@ -73,7 +73,7 @@ then see and hear each other.
 ## Who can I video chat with?
 
 The signalling protocol use IRC to send the WebRTC signals. The
-[signalling protocol](https://github.com/Nordaaker/convos/blob/4.08/lib/Convos/Core/Connection/Irc.pm#L63-L64)
+[signalling protocol](https://github.com/convos-chat/convos/blob/4.08/lib/Convos/Core/Connection/Irc.pm#L63-L64)
 is however specific for Convos, so you can only video chat with other people
 who have the same Convos version as yourself.
 
@@ -93,9 +93,9 @@ experimental:
 ## What is next?
 
 We hope to stabilize video support in Convos
-[v5.00](https://github.com/Nordaaker/convos/milestone/21). It might sound like
+[v5.00](https://github.com/convos-chat/convos/milestone/21). It might sound like
 that that is way into the future, but in reality Convos will jump from 4.xx to
 5.00 once video support seems to work properly.
 
 Want to help? Give us feedback either in #convos on freeenode.net or on
-[GitHub](https://github.com/Nordaaker/convos/issues).
+[GitHub](https://github.com/convos-chat/convos/issues).

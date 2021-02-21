@@ -66,7 +66,7 @@ which makes Convos faster. It can be installed with the command below:
 
 It is *not* possible to run Convos with hypnotoad nor the prefork server. The
 reason for this is that the
-[Convos core](https://github.com/Nordaaker/convos/blob/master/lib/Convos/Core.pm)
+[Convos core](https://github.com/convos-chat/convos/blob/master/lib/Convos/Core.pm)
 requires shared memory, which a forked environment contradicts.
 
 You need to run Convos in single process, using the
@@ -79,9 +79,9 @@ above.
 
 You can use the command below to pull and run convos:
 
-    docker pull nordaaker/convos:stable
+    docker pull convos/convos:stable
     mkdir -p $HOME/convos/data
-    docker run -it -p 8080:3000 -v $HOME/convos/data:/data nordaaker/convos:stable
+    docker run -it -p 8080:3000 -v $HOME/convos/data:/data convos/convos:stable
 
 The last command will make Convos available on http://localhost:8080, and
 persist data in `$HOME/convos/data`.
@@ -90,18 +90,18 @@ For Linux distributions with SELinux Enforcing policy (e.g. CentOS, Fedora or RH
 
     -v $HOME/convos/data:/data:z
 
-There are some [alternative tags](https://hub.docker.com/r/nordaaker/convos/tags)
+There are some [alternative tags](https://hub.docker.com/r/convos/convos/tags)
 available, but we suggest using the "stable" release.
 
 ### Git clone
 
 Git can be used to get full flexibility. The command below will only clone the
-[stable](https://github.com/Nordaaker/convos/tree/stable) branch. Omit the
+[stable](https://github.com/convos-chat/convos/tree/stable) branch. Omit the
 `--single-branch --no-tags` to get everything
 
     # Get the code and install dependencies
     cd $HOME;
-    git clone https://github.com/Nordaaker/convos.git \
+    git clone https://github.com/convos-chat/convos.git \
       --branch stable --single-branch --no-tags
     cd $HOME/convos;
     ./script/convos install

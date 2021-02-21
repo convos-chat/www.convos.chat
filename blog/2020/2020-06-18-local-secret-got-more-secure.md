@@ -29,7 +29,7 @@ the other hand can be guessed by hacker, especially if you were running Convos
 inside [Docker](https://www.docker.com/).
 
 This security issue has now been patched in
-[54d1763ac](https://github.com/Nordaaker/convos/commit/54d1763ac65c05aad27ad454b4e5a62ba8352d39#diff-ea66a76f841b0b3c8843d07100b36304R134-R144).
+[54d1763ac](https://github.com/convos-chat/convos/commit/54d1763ac65c05aad27ad454b4e5a62ba8352d39#diff-ea66a76f841b0b3c8843d07100b36304R134-R144).
 
 The new way to calculate secrets is either...
 

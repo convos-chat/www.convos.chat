@@ -124,7 +124,7 @@ ship with Convos:
 * [Convos::Plugin::Cms](https://convos.chat/doc/Convos::Plugin::Cms) is used to
   render this web page, but can be customized to render *your* own content.
 
-There are [more](https://github.com/Nordaaker/convos/tree/master/lib/Convos/Plugin)
+There are [more](https://github.com/convos-chat/convos/tree/master/lib/Convos/Plugin)
 plugins that ship with Convos. Want to write you own? Look at the [development
 guide](/doc/develop) for how to get started.
 
@@ -135,6 +135,6 @@ time to implement it yet. It might also be because we do not want to implement
 certain features. We do not want Convos to support every weird feature, since
 we want both the user experience and code base to be clean.
 
-Please submit an [issue](https://github.com/Nordaaker/convos/issues), come
+Please submit an [issue](https://github.com/convos-chat/convos/issues), come
 and talk with us in [#convos](irc://chat.freenode.net:6697/#convos) on
 Freenode or send a tweet to [@convosby](https://twitter.com/convosby).

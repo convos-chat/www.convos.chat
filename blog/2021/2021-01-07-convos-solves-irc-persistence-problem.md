@@ -34,7 +34,7 @@ just works™ philosophy.
 But, guess what? There is something better than bouncers and
 proprietary services: Convos! Yes, Convos! A free (as in freedom) and
 open source client-bouncer-platform mixture created by an independent
-four people non-profit called Nordaaker. It consists of an always
+four people non-profit called convos-chat. It consists of an always
 running shared IRC bouncer and an intuitive web client that looks just
 like any other IRC client. It's something you self-host as well, but
 it's way, way easier to configure, manage and share with friends and
@@ -48,5 +48,5 @@ and were able to put my laptop to rest. There were some issues, which
 were immediately solved by my friend Batman (jhthorsen's nick in
 Freenode, not the crazy guy that appears in the Marvel comics created
 by Steve Jobs), and now Convos is nearly perfect. Thanks, Batman and
-Nordaaker, you've done an excellent job in making IRC better for
+convos-chat, you've done an excellent job in making IRC better for
 everyone!
