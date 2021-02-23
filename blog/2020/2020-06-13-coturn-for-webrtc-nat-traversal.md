@@ -4,6 +4,10 @@ canonical: https://marcus.convos-chat.com/post/coturn-for-webrtc-nat-traversal/
 author: Marcus Ramberg
 ---
 
+IMPORTANT! This feature has been replaced by Jitsi integration instead.
+
+<!--more-->
+
 This article will show you how to set up [Coturn](https://github.com/coturn/coturn). This is a service that allows hosts behind NAT to communicate peer to peer with webrtc. STUN is helping to negotiate port/ip and TURN will proxy the actual traffic if all else fails.
 
 We're using this with [Convos](https://convos.chat/)' video IRC feature, but the same applies to other WebRTC projects.

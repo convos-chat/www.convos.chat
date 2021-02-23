@@ -3,10 +3,12 @@ title: Video support in Convos v4.08
 author: Jan Henning Thorsen
 ---
 
-Convos [v4.08](https://github.com/convos-chat/convos/blob/4.08/Changes#L3) is
-fresh from the bakery, and this time we are proud to announce video support!
+IMPORTANT! This feature has been replaced by Jitsi integration instead.
 
 <!--more-->
+
+Convos [v4.08](https://github.com/convos-chat/convos/blob/4.08/Changes#L3) is
+fresh from the bakery, and this time we are proud to announce video support!
 
 ## How do I enable video support in Convos?
 
