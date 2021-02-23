@@ -159,6 +159,16 @@ will be a security issue.
 The [FAQ](/doc/faq#can-convos-run-behind-behind-my-favorite-web-server)
 has more details on how to set up Convos behind a reverse proxy server.
 
+### CONVOS_WEBIRC_PASSWORD_NNN
+
+You can enable the WEBIRC extension by setting an environment variable per
+connection name. Example:
+
+1. You have a connection ID "irc-localhost". (Shown as "localhost" in the sidebar)
+2. Set the following environment variable to enable WEBIRC:
+
+    CONVOS_WEBIRC_PASSWORD_LOCALHOST=SomeSuperSecretPassword
+
 ## Global config settings
 
 The global config settings are available for Convos admins from within the
