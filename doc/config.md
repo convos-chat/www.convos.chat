@@ -95,6 +95,13 @@ However if you are running Convos as a [snap](https://snapcraft.io/convos/), the
 
 Example: `$HOME/snap/convos/common`
 
+### CONVOS_DEFAULT_THEME and CONVOS_DEFAULT_SCHEME
+
+These two environment variables can be used to set the default theme for the CMS pages
+and new users.
+
+Default: CONVOS_DEFAULT_THEME=convos CONVOS_DEFAULT_SCHEME=light
+
 ### CONVOS_INVITE_LINK_VALID_FOR
 
 This variable is used for invite and password recovery links, and specifies how
