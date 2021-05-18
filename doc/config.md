@@ -79,6 +79,13 @@ Setting this variable to a true value will print extra debug information to
 STDERR. Another useful debug variable is `MOJO_IRC_DEBUG` which gives you
 IRC level debug information.
 
+### CONVOS_DEFAULT_THEME and CONVOS_DEFAULT_SCHEME
+
+These two environment variables can be used to set the default theme for the CMS pages
+and new users.
+
+Default: CONVOS_DEFAULT_THEME=convos CONVOS_DEFAULT_SCHEME=light
+
 ### CONVOS_HOME
 
 This variable is used by
@@ -94,13 +101,6 @@ However if you are running Convos as a [snap](https://snapcraft.io/convos/), the
 [SNAP_USER_COMMON](https://snapcraft.io/docs/environment-variables).
 
 Example: `$HOME/snap/convos/common`
-
-### CONVOS_DEFAULT_THEME and CONVOS_DEFAULT_SCHEME
-
-These two environment variables can be used to set the default theme for the CMS pages
-and new users.
-
-Default: CONVOS_DEFAULT_THEME=convos CONVOS_DEFAULT_SCHEME=light
 
 ### CONVOS_INVITE_LINK_VALID_FOR
 
