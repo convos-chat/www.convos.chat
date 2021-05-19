@@ -63,4 +63,5 @@ need to remember the emoji name exactly by name.
 
 Hope you enjoy these changes! Like to see your favorite chat feature
 implemented? Then [get involved](/doc/develop). Need some help?
-Ask us in [#convos](irc://chat.freenode.net:6697/convos) on chat.freenode.net.
+Ask us in [#convos](irc://irc.libera.chat:6697/convos) on
+[irc.libera.chat](https://libera.chat/).

@@ -37,8 +37,8 @@ Are you interested in developing Convos? The check out the
 There are several ways to get in touch. We would love to hear from you in
 either way you choose!
 
-You can join [#convos](irc://chat.freenode.net:6697/#convos) on
-[freenode.net](http://freenode.net/) for an interactive chat, send us a
+You can join [#convos](irc://irc.libera.chat/#convos) on
+[libra.net](http://libra.chat/) for an interactive chat, send us a
 message on [twitter](https://twitter.com/convosby) or create an
 [issue](https://github.com/convos-chat/convos/issues) on Github. If you're more
 of the email type, then send an email to

@@ -79,7 +79,6 @@ inspiration and examples. If you're happy with the theme, then please consider
 [sharing](https://github.com/convos-chat/convos/pulls) it with the Convos
 community.
 
-Got more questions? Join us in [#convos](irc://irc.freenode.net/%23convos)
-at freenode.net!
+Got more questions? Join us in #convos on irc.libera.chat:6697.
 
 Happy theming :)

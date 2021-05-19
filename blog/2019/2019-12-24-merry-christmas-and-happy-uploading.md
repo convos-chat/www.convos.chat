@@ -77,5 +77,5 @@ I don't know exactly how to solve #380 and #425 though, so any input is more
 than welcome!
 
 Got something else that you think should be prioritized? Come talk to us in
-\#convos at [chat.freenode.net](irc://chat.freenode.net:6697/%23convos?tls=1) or
+\#convos on [irc.libera.chat](https://libera.chat/).
 use the [issue tracker](https://github.com/convos-chat/convos/issues).

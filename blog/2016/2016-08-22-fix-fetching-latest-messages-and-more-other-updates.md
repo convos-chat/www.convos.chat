@@ -63,6 +63,5 @@ This is much appreciated! He also posted a question on
 
 ## Thanks to everyone
 
-Thanks to everyone who's active in #convos on
-[chat.freenode.net](http://chat.freenode.net) and other channels, giving
-feedback regarding the user experience and other minor bugs.
+Thanks to everyone who's active in #convos on irc.libera.chat and other
+channels, giving feedback regarding the user experience and other minor bugs.

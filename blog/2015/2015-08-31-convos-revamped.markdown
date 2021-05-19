@@ -39,9 +39,8 @@ in Convos:
 Convos supports [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat). IRC
 is a very old, stable but also flexible protocol. The main reason why we
 support IRC is that we wanted to talk with people on [irc.perl.org](http://www.irc.perl.org/)
-and [freenode](http://freenode.net), but the protocol and server side is
-flexible enough to be extended if you want more functionality on an in-house
-IRC server.
+and freenode, but the protocol and server side is flexible enough to be extended
+if you want more functionality on an in-house IRC server.
 
 [Mojo::IRC](https://metacpan.org/release/Mojo-IRC) started off as a part of
 Convos, but we released it to CPAN as soon as we thought it was stable enough.
@@ -223,4 +222,4 @@ the separation of concerns clearer.
 
 Got questions, feedback, want to contribute or just see what's going on with
 the project? Follow [Convos](http://twitter.com/convosby) on Twitter or
-join the IRC channel #convos on irc.freenode.net.
+join the IRC channel #convos on irc.libera.chat:6697.

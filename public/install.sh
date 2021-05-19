@@ -56,7 +56,7 @@ if $perl convos/script/convos install; then
   echo "";
   echo "Thank you for trying out Convos! Need help? Check";
   echo "out https://convos.chat/doc, or come talk to us in"
-  echo "#convos on irc.freenode.net."
+  echo "#convos on irc.libera.chat:6697."
   echo "";
 else
   cannot_install "Dependencies missing.";

@@ -136,5 +136,5 @@ certain features. We do not want Convos to support every weird feature, since
 we want both the user experience and code base to be clean.
 
 Please submit an [issue](https://github.com/convos-chat/convos/issues), come
-and talk with us in [#convos](irc://chat.freenode.net:6697/#convos) on
-Freenode or send a tweet to [@convosby](https://twitter.com/convosby).
+and talk with us in [#convos](https://libera.chat/) or send a tweet to
+[@convosby](https://twitter.com/convosby).

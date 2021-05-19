@@ -139,4 +139,4 @@ or comment on the [issues](https://github.com/convos-chat/convos/issues).
 
 Want to help out with the project? Have a look at the
 [developement guide](/doc/develop) or come talk to us in the #convos channel
-on irc.freenode.net.
+on irc.libera.chat:6697.

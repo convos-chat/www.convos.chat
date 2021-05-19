@@ -140,6 +140,3 @@ of the assets with the following command:
     BUILD_ASSETS=1 prove -l t/production-resources.t
 
 That should be it! Happy theming!
-
-Drop us a question in [#convos](irc://chat.freenode.net:6697/convos) on
-chat.freenode.net if something does not work as expectd.
