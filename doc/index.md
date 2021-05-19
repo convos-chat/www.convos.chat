@@ -41,8 +41,7 @@ You can join [#convos](irc://irc.libera.chat/#convos) on
 [libra.net](http://libra.chat/) for an interactive chat, send us a
 message on [twitter](https://twitter.com/convosby) or create an
 [issue](https://github.com/convos-chat/convos/issues) on Github. If you're more
-of the email type, then send an email to
-<a href="mailto:contact@convos.chat">contact@convos.chat</a>.
+of the email type, then send an email to [contact@convos.chat](mailto:contact@convos.chat).
 
 ## Statistics
 
