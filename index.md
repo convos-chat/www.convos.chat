@@ -123,7 +123,7 @@ Convos works. You might also run into the developers in the `#convos` channel.
   <a href="https://demo.convos.chat/login" class="btn"><i class="fas fa-sign-in-alt"></i> Sign in</a>
 </p>
 
-Note that the demo is [locked](/doc/config#convosforcedircserver) to the
+Note that the demo is [locked](/doc/config#force-default-connection) to the
 IRC server running on localhost. This is to prevent the server from getting
 banned from IRC networks with strict limitations.
 
