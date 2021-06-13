@@ -119,7 +119,7 @@ Want to try out Convos? Sign up with your email address and instantly see how
 Convos works. You might also run into the developers in the `#convos` channel.
 
 <p class="text-center has-extra-vertical-margin">
-  <a href="https://demo.convos.chat/login" class="btn"><i class="fas fa-user-plus"></i> Sign up</a>
+  <a href="https://demo.convos.chat/register" class="btn"><i class="fas fa-user-plus"></i> Sign up</a>
   <a href="https://demo.convos.chat/login" class="btn"><i class="fas fa-sign-in-alt"></i> Sign in</a>
 </p>
 
