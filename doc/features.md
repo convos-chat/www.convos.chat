@@ -4,9 +4,9 @@ description: Information about some of the Convos features
 toc: true
 ---
 
-IMPORTANT! This document is not a work in progress, and some of the screenshots
-might be inaccurate. Please submit a PR or let us know in the #convos channel
-on [Libera](https://libera.chat/) if you think something is wrong or missing.
+This document is a work in progress, and some of the screenshots might be
+inaccurate. Please submit a PR or let us know in the #convos channel on
+[Libera](https://libera.chat/) if you think something is wrong or missing.
 
 To see what Convos really support, we recommend trying out the
 [demo](https://demo.convos.chat/register).

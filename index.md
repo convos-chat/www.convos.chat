@@ -29,7 +29,7 @@ image: /screenshots/2020-05-28-convos-chat.jpg
     <h3>Ready to start?</h3>
     <span><u>Install</u> Convos.</span>
   </a>
-  <a href="#features" class="cards--card">
+  <a href="/doc/features" class="cards--card">
     <i class="fas fa-list-ul"></i>
     <h3>Undecided?</h3>
     <span>Check out our <u>feature list</u>.</span>
