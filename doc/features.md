@@ -56,11 +56,6 @@ running](/doc/start).
 
 * [Forgotten password and invitation links](/2019/11/24/convos-one-point-two#forgotten-password-and-invitation-links)
 
-## Translations
-
-Convos is translated to Italian, Norwegian and Spanish. Want Convos to be
-available in your language? Please open a PR!
-
 ## Notifications
 
 Convos will show desktop notifications when your nick is mentioned, or if any
@@ -113,6 +108,11 @@ unread messages.
 * [How to define custom styling for Convos](/blog/2019/11/2/custom-styling)
 * [Create your own theme in minutes!](/blog/2020/6/14/create-your-own-theme-detailed-walkthrough)
 * [Default theme config](/doc/config#convos_default_theme-and-convos_default_scheme)
+
+## Translations
+
+Convos is translated to Italian, Norwegian and Spanish. Want Convos to be
+available in your language? Please open a PR!
 
 ## User administration
 
