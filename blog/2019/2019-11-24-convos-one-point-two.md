@@ -16,7 +16,7 @@ of these needs.
 You can see a list of all the changes and bug fixes on
 [GitHub](https://github.com/convos-chat/convos/blob/2.00/Changes#L3).
 
-## Administration user
+## User administration
 
 One of the main reasons why this is a major release, is the introduction of
 user roles. Currently a user can be either "admin" or just a regular user.

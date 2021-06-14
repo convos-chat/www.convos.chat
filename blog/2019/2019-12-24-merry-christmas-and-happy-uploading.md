@@ -26,7 +26,7 @@ Uploading a file can be done in two ways:
 1. Drag and drop the file into the conversation.
 2. Click on the new "upload" icon, next to the "send" icon in the message input.
 
-[![Picture of Convos upload icon](/screenshots/2019-12-24-upload.jpg)](/screenshots/2019-12-24-upload.jpg)
+[![Picture of Convos upload icon](/screenshots/2019-12-24-upload.png)](/screenshots/2019-12-24-upload.png)
 
 Either will result in a link being inserted into the message input field.
 Clicking on send afterwards will share the file with the person/people in the
