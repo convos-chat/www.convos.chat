@@ -12,7 +12,7 @@ image: /screenshots/2020-05-28-convos-chat.jpg
       <div class="hero__body">Convos is the simplest way to use IRC and it is always online.</div>
       <div class="hero__footer"><a href="#instant-demo" class="btn"><i class="fas fa-sign-in-alt"></i> Try the demo</a></div>
     </div>
-    <a href="#instant-demo" class="hero--media">
+    <a href="/screenshots/2020-05-28-convos-chat.jpg" class="hero--media">
       <img src="/screenshots/2020-05-28-convos-chat.jpg" alt="Picture of Convos conversation">
     </a>
   </header>
