@@ -224,7 +224,7 @@ Convos has an OpenAPI powered REST API. The specification is used to both
 generate Perl code for validation, and to generate documentation. Resources:
 
 * [Documentation](/api.html)
-* [Specification](https://github.com/convos-chat/convos/blob/master/public/convos-api.json)
+* [Specification](https://github.com/convos-chat/convos/blob/master/public/convos-api.yaml)
 * [OpenAPI](https://www.openapis.org/)
 * [Mojolicious::Plugin::OpenAPI](/doc/Mojolicious/Plugin/OpenAPI)
 
