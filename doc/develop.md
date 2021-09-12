@@ -48,6 +48,11 @@ instead:
     ./script/cpanm --installdeps --sudo .
     ./script/cpanm --installdeps .
 
+If you are on macOS, you might have to install Perl and some other utilities using
+[homebrew](https://brew.sh/):
+
+    brew install coreutils perl openssl
+
 ## Installing an IRC daemon
 
 It is highly suggested that you install an IRC daemon, since many networks
