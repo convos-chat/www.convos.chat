@@ -24,7 +24,7 @@ And you do [protect](/doc/config#listen) Convos with HTTPS, right..?
 
 ## Online/offline state for private dialogs
 
-Version [0.99_31](https://github.com/convos-chat/convos/blob/master/Changes) was
+Version [0.99_31](https://github.com/convos-chat/convos/blob/main/Changes) was
 released with a new method to detect if the user in a private dialog is online
 or not: Convos now uses the
 [ISON](https://tools.ietf.org/html/rfc2812#section-4.9) command instead of

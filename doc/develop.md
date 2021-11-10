@@ -133,44 +133,44 @@ start the [production](/doc/start#git-clone) version of Convos:
 
 * ./assets/
 
-  The [assets](https://github.com/convos-chat/convos/tree/master/assets)
+  The [assets](https://github.com/convos-chat/convos/tree/main/assets)
   directory contains all JavaScript and Sass files, which will be used to
   generate the public files. The conversion is done with
   [Mojolicious::Plugin::Webpack](/doc/Mojolicious/Plugin/Webpack).
 
 * ./cpanfile
 
-  The [cpanfile](https://github.com/convos-chat/convos/blob/master/cpanfile) is
+  The [cpanfile](https://github.com/convos-chat/convos/blob/main/cpanfile) is
   used to document all the requirements, while the `Makefile.PL` file is
   generated from the content of the cpanfile.
 
 * ./lib/
 
-  The [lib](https://github.com/convos-chat/convos/tree/master/lib) directory
+  The [lib](https://github.com/convos-chat/convos/tree/main/lib) directory
   contains all the Perl source code.
 
 * ./public
 
-  The [public](https://github.com/convos-chat/convos/tree/master/public)
+  The [public](https://github.com/convos-chat/convos/tree/main/public)
   directory contains fonts and images  which can be downloaded through the
   Convos web server.
 
 * ./script
 
-  The [script](https://github.com/convos-chat/convos/tree/master/script)
+  The [script](https://github.com/convos-chat/convos/tree/main/script)
   directory contains the main application file
-  ([convos](https://github.com/convos-chat/convos/blob/master/script/convos))
+  ([convos](https://github.com/convos-chat/convos/blob/main/script/convos))
   and helper scripts.  The important part here is that every file which has
   the executable bit set will be part of the final CPAN distribution.
 
 * ./t
 
-  The [t](https://github.com/convos-chat/convos/tree/master/t) directory
+  The [t](https://github.com/convos-chat/convos/tree/main/t) directory
   contains test files for the Perl code.
 
 * ./\_\_tests__
 
-  The [__tests__](https://github.com/convos-chat/convos/tree/master/__tests__)
+  The [__tests__](https://github.com/convos-chat/convos/tree/main/__tests__)
   directory contains test files for the JavaScript code.
 
 ## Convos frontend
@@ -195,9 +195,9 @@ with a thin logical layer inside the controllers:
 * [Convos::Controller::User](/doc/Convos/Controller/User)
 
 The main layout for the Svelte powered frontend is
-[/assets/App.svelte](https://github.com/convos-chat/convos/blob/master/assets/App.svelte)
+[/assets/App.svelte](https://github.com/convos-chat/convos/blob/main/assets/App.svelte)
 and the routes are set up in
-[/assets/routes.js](https://github.com/convos-chat/convos/blob/master/assets/routes.js).
+[/assets/routes.js](https://github.com/convos-chat/convos/blob/main/assets/routes.js).
 
 ## Convos core
 
@@ -229,7 +229,7 @@ Convos has an OpenAPI powered REST API. The specification is used to both
 generate Perl code for validation, and to generate documentation. Resources:
 
 * [Documentation](/api.html)
-* [Specification](https://github.com/convos-chat/convos/blob/master/public/convos-api.yaml)
+* [Specification](https://github.com/convos-chat/convos/blob/main/public/convos-api.yaml)
 * [OpenAPI](https://www.openapis.org/)
 * [Mojolicious::Plugin::OpenAPI](/doc/Mojolicious/Plugin/OpenAPI)
 

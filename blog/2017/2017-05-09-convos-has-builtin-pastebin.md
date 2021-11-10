@@ -39,7 +39,7 @@ to play around and tweak the setting, you can try the command below:
 There are currently no plan to implement support for sending a paste to an
 external service, but that doesn't prevent you from making your own. The
 pastebin is implemented as a
-[plugin](https://github.com/convos-chat/convos/blob/master/lib/Convos/Plugin/Paste.pm),
+[plugin](https://github.com/convos-chat/convos/blob/main/lib/Convos/Plugin/Paste.pm),
 meaning you can create your own and load that instead.
 
 The plugin simply listens to a `multiline_message` event and creates a paste

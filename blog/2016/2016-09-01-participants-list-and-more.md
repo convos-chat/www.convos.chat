@@ -29,7 +29,7 @@ list for a channel. This is now changed: A "cog wheel" button, next to the
 
 There was an issue installing Convos if you did not already have
 `IO::Socket::SSL` installed. This SSL module was added to the
-[dependency list](https://github.com/convos-chat/convos/blob/master/cpanfile),
+[dependency list](https://github.com/convos-chat/convos/blob/main/cpanfile),
 but that doesn't help much when the module is required to install itself...
 The fix is to install modules over HTTP instead of HTTPS, until
 `IO::Socket::SSL` is installed.
@@ -37,7 +37,7 @@ The fix is to install modules over HTTP instead of HTTPS, until
 ## But wait! There's more!
 
 Check out the
-[Changes](https://github.com/convos-chat/convos/blob/master/Changes) or have
+[Changes](https://github.com/convos-chat/convos/blob/main/Changes) or have
 a look at the [git history](https://github.com/convos-chat/convos/commits/stable)
 if you want all the details, but here are some highlights:
 

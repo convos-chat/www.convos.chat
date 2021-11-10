@@ -48,5 +48,5 @@ will correctly track channel redirects.
 ## More?
 
 Want more details? Check out the
-[Changelog](https://github.com/convos-chat/convos/blob/master/Changes), or come
+[Changelog](https://github.com/convos-chat/convos/blob/main/Changes), or come
 and [talk to us](/doc#get-in-touch).

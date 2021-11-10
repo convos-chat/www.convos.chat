@@ -35,9 +35,9 @@ The custom web page can be created by creating some directories and files in
   [$CONVOS_HOME/content/blog/2020/2020-06-03-content-management-system.md](https://github.com/convos-chat/convos/blob/www.convos.chat/blog/2020/2020-05-14-content-management-system.md).
 * Any static file, such as images, can be placed in the
   __`$CONVOS_HOME/content/public/`__ directory. Do be careful though, and avoid
-  override any core [Convos files](https://github.com/convos-chat/convos/tree/master/public).
+  override any core [Convos files](https://github.com/convos-chat/convos/tree/main/public).
 * Files in the __`$CONVOS_HOME/content/templates/`__ directory can be used to
-  add, or override any core [Convos template](//github.com/convos-chat/convos/tree/master/templates).
+  add, or override any core [Convos template](//github.com/convos-chat/convos/tree/main/templates).
   Supported overrides are the __templates/partial/cms*.ep__ files.
 
 See the [www.convos.chat](https://github.com/convos-chat/convos/tree/www.convos.chat)
@@ -129,7 +129,7 @@ must however be enabled with an environment variable:
 
 It is unlikely to make a WYSIWYG editor for Convos, but if you like this
 addition then we would probably take a PR. Like this additon, but don't
-want all of Convos? [Convos::Plugin::Cms](https://github.com/convos-chat/convos/blob/master/lib/Convos/Plugin/Cms.pm)
+want all of Convos? [Convos::Plugin::Cms](https://github.com/convos-chat/convos/blob/main/lib/Convos/Plugin/Cms.pm)
 should be fairly easy to pull out and embed in your own
 [Mojolicious](https://mojolicious.org/) project.
 

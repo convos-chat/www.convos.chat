@@ -25,7 +25,7 @@ for more details.
 A good way to start is to copy paste an existing theme, choose wisely the
 one that is the simplest and closest to what you want to achieve:
 
-    curl https://raw.githubusercontent.com/convos-chat/convos/master/public/themes/high-contrast_color-scheme-light.css > mytheme.css
+    curl https://raw.githubusercontent.com/convos-chat/convos/main/public/themes/high-contrast_color-scheme-light.css > mytheme.css
 
 Here I chose light version of hight-contrast, but it would have been smarter to
 choose a dark version, since this theme I decided to create is intended to be black and green.
@@ -402,7 +402,7 @@ And the CSS code:
 * Everything you don't define is inherited
 * Only some vars can be overriden, to know which one, check other themes, try
   some obvious names or check into [`*.scss`
-  files](https://github.com/convos-chat/convos/blob/master/assets/sass/_variables.scss).
+  files](https://github.com/convos-chat/convos/blob/main/assets/sass/_variables.scss).
   If missing, you can [ask to add them](/doc/#get-in-touch).
 * The help page proposes some demo page, it is very convenient to test all
   pages (even the one that print not usually like 404)

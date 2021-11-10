@@ -66,7 +66,7 @@ which makes Convos faster. It can be installed with the command below:
 
 It is *not* possible to run Convos with hypnotoad nor the prefork server. The
 reason for this is that the
-[Convos core](https://github.com/convos-chat/convos/blob/master/lib/Convos/Core.pm)
+[Convos core](https://github.com/convos-chat/convos/blob/main/lib/Convos/Core.pm)
 requires shared memory, which a forked environment contradicts.
 
 You need to run Convos in single process, using the

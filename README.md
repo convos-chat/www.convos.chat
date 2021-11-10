@@ -1,6 +1,6 @@
 [![convos](https://snapcraft.io//convos/badge.svg)](https://snapcraft.io/convos)
-[![Docker Status](https://github.com/convos-chat/convos/workflows/Docker%20Image%20CI/badge.svg?branch=master)](https://hub.docker.com/r/convos/convos)
-[![Build Status](https://github.com/convos-chat/convos/workflows/Linux%20CI/badge.svg?branch=master)](https://github.com/convos-chat/convos/actions)
+[![Docker Status](https://github.com/convos-chat/convos/actions/workflows/docker.yml/badge.svg)](https://github.com/convos-chat/convos/actions/workflows/docker.yml)
+[![Build Status](https://github.com/convos-chat/convos/actions/workflows/linux.yml/badge.svg)](https://github.com/convos-chat/convos/actions/workflows/linux.yml)
 [![GitHub issues](https://img.shields.io/github/issues/convos-chat/convos)](https://github.com/convos-chat/convos/issues)
 
 # Convos - Multiuser chat application
@@ -27,5 +27,5 @@ git clone git@github.com:convos-chat/www.convos.chat $CONVOS_HOME/content
 cd $CONVOS_HOME/content
 $EDITOR index.md
 git commit -a -m "made some changes"
-git push origin master
+git push origin main
 ```

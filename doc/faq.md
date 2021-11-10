@@ -124,7 +124,7 @@ ship with Convos:
 * [Convos::Plugin::Cms](https://convos.chat/doc/Convos::Plugin::Cms) is used to
   render this web page, but can be customized to render *your* own content.
 
-There are [more](https://github.com/convos-chat/convos/tree/master/lib/Convos/Plugin)
+There are [more](https://github.com/convos-chat/convos/tree/main/lib/Convos/Plugin)
 plugins that ship with Convos. Want to write you own? Look at the [development
 guide](/doc/develop) for how to get started.
 

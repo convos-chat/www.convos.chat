@@ -61,7 +61,7 @@ take effect.
 ### CONVOS_BACKEND
 
 Can be set to any class name that inherit from
-[Convos::Core::Backend](https://github.com/convos-chat/convos/blob/master/lib/Convos/Core/Backend.pm).
+[Convos::Core::Backend](https://github.com/convos-chat/convos/blob/main/lib/Convos/Core/Backend.pm).
 
 Default: `Convos::Core::Backend::File`
 
@@ -89,7 +89,7 @@ Default: CONVOS_DEFAULT_THEME=convos CONVOS_DEFAULT_SCHEME=light
 ### CONVOS_HOME
 
 This variable is used by
-[Convos::Core::Backend::File](https://github.com/convos-chat/convos/blob/master/lib/Convos/Core/Backend/File.pm)
+[Convos::Core::Backend::File](https://github.com/convos-chat/convos/blob/main/lib/Convos/Core/Backend/File.pm)
 to figure out where to store settings and log files.
 
 See the [FAQ](./faq) for more details.
