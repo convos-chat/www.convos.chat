@@ -1,38 +1,6 @@
 #!/bin/sh
-REPO="https://github.com/convos-chat/convos.git";
-TAR_GZ="https://github.com/convos-chat/convos/archive/stable.tar.gz";
-
-fetch_tar () {
-  find_bin tar || return $?;
-  find_bin curl || find_bin wget || return $?;
-  mkdir convos;
-  if [ -n "$curl" ]; then
-    echo "\$ $curl -s -L $TAR_GZ | $tar xz -C convos --strip-components 1";
-    $curl -s -L $TAR_GZ | $tar xz -C convos --strip-components 1;
-  else
-    echo "\$ $wget -q -O - $TAR_GZ | $tar xz -C convos --strip-components 1";
-    $wget -q -O - $TAR_GZ | $tar xz -C convos --strip-components 1;
-  fi
-}
-
-git_clone () {
-  find_bin git || return $?;
-  if [ -d convos ]; then
-    cd convos;
-    echo "\$ $git pull origin stable";
-    $git pull origin stable;
-    cd ..;
-  else
-    echo "\$ $git clone --branch stable $REPO";
-    $git clone --branch stable $REPO;
-  fi
-}
-
-find_bin () {
-  bin=$(which $1);
-  [ -z "$bin" ] && return 1;
-  export $1="$bin";
-}
+REPO_URL="https://github.com/convos-chat/convos.git";
+TAR_URL="https://github.com/convos-chat/convos/archive/stable.tar.gz";
 
 cannot_install () {
   echo "";
@@ -44,19 +12,70 @@ cannot_install () {
   exit 1;
 }
 
-echo "Installing Convos...";
-find_bin perl || cannot_install "perl is required.";
-find_bin make || cannot_install "make is required.";
-find_bin gcc  || cannot_install "gcc is required.";
+check_required_dependencies () {
+  PERL_BIN=$(find_bin perl);
+  [ -z "$PERL_BIN" ] && cannot_install "'perl' has to be installed.";
+  MAKE_BIN=$(find_bin make);
+  [ -z "$MAKE_BIN" ] && cannot_install "'make' has to be installed.";
+  GCC_BIN=$(find_bin gcc);
+  [ -z "$GCC_BIN" ] && cannot_install "'gcc' has to be installed.";
+}
 
-git_clone || fetch_tar || cannot_install "git, curl or wget is required.";
+chdir_convos () {
+  echo "\$ cd convos";
+  cd convos || cannot_install "cd convos failed: $?";
+}
 
-echo "\$ $perl convos/script/convos install";
-if $perl convos/script/convos install; then
-  echo "";
-  echo "Thank you for trying out Convos! Need help? Check";
-  echo "out https://convos.chat/doc, or come talk to us in"
-  echo "#convos on irc.libera.chat:6697."
+find_bin () {
+  which $1 2>/dev/null;
+}
+
+fetch_tar () {
+  CURL_BIN=$(find_bin curl);
+  TAR_BIN=$(find_bin tar);
+  WGET_BIN=$(find_bin wget);
+
+  [ -z "$TAR_BIN" ] && cannot_install "'tar' has to be installed."
+  [ -z "$CURL_BIN$WGET_BIN" ] && return 3;
+  [ -d convos ] || mkdir convos;
+
+  if [ -n "$CURL_BIN" ]; then
+    echo "\$ $CURL_BIN -s -L $TAR_URL | $TAR_BIN xz -C convos --strip-components 1";
+    $CURL_BIN -s -L $TAR_URL | $TAR_BIN xz -C convos --strip-components 1 || cannot_install "curl + tar failed";
+  else
+    echo "\$ $WGET_BIN -q -O - $TAR_URL | $TAR_BIN xz -C convos --strip-components 1";
+    $WGET_BIN -q -O - $TAR_URL | $TAR_BIN xz -C convos --strip-components 1 || cannot_install "wget + tar failed";
+  fi
+
+  chdir_convos;
+}
+
+git_clone () {
+  GIT_BIN=$(find_bin git);
+  [ -z "$GIT_BIN" ] && return 3;
+
+  if [ -d convos ]; then
+    [ ! -d convos/.git ] && return 2;
+    chdir_convos;
+    echo "\$ $GIT_BIN pull origin stable";
+    $GIT_BIN pull origin stable;
+  else
+    echo "\$ $GIT_BIN clone --branch stable $REPO_URL";
+    $GIT_BIN clone --branch stable $REPO_URL;
+    chdir_convos;
+  fi
+}
+
+[ -d convos ] && ACTION="Upgrading" || ACTION="Installing";
+echo "$ACTION Convos...";
+
+check_required_dependencies;
+git_clone || fetch_tar || cannot_install "Either 'git', 'curl' or 'wget' has to be installed.";
+
+echo "\$ $PERL_BIN script/convos install";
+if $PERL_BIN script/convos install; then
+  echo "Thank you for downloading Convos! Need help? Check out https://convos.chat/doc,";
+  echo "or come talk to us in #convos on irc.libera.chat:6697.";
   echo "";
 else
   cannot_install "Dependencies missing.";
