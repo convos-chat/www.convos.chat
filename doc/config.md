@@ -35,7 +35,7 @@ You can make convos listen to a variety of addresses:
     CONVOS_REVERSE_PROXY=1 ./script/convos daemon \
       --listen http://127.0.0.1:8080
 
-See [CONVOS_REVERSE_PROXY](#mojoreverseproxy) for more details about setting
+See [CONVOS_REVERSE_PROXY](#convos_reverse_proxy) for more details about setting
 up Convos behind a reverse proxy.
 
 ## Environment variables
@@ -157,14 +157,11 @@ Examples:
 
 The `CONVOS_REVERSE_PROXY` environment variable must be set to "1" to enable
 reverse proxy support. This will then allow Convos to automatically pick up the
-`X-Forwarded-For` and `X-Request-Base` HTTP headers set in your reverse proxy
-web server.
+`X-Forwarded-For` and `X-Request-Base` HTTP headers set in your
+[reverse proxy web server](/doc/reverse-proxy).
 
 Note that setting this environment variable without a reverse proxy in front
 will be a security issue.
-
-The [FAQ](/doc/faq#can-convos-run-behind-behind-my-favorite-web-server)
-has more details on how to set up Convos behind a reverse proxy server.
 
 ### CONVOS_WEBIRC_PASSWORD_NNN
 
