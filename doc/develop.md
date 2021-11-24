@@ -15,7 +15,7 @@ such as [prove](https://metacpan.org/pod/distribution/TAP-Parser/bin/prove)
 and [cpanm](https://metacpan.org/pod/distribution/App-cpanminus/bin/cpanm).
 
 The JavaScript is compiled using [rollupjs](https://rollupjs.org/) and the
-JavaScript dependency tree is maintained using [pnpm](https://pnpm.js.org/).
+JavaScript dependency tree is maintained using [npm](https://docs.npmjs.com/).
 
 ## Getting the source code
 
@@ -33,11 +33,8 @@ you should `cd ./convos` first.
 
 Once you have the source code you should install the dependencies:
 
-    pnpm i
+    npm i
     ./script/convos install --develop
-
-[pnpm](https://pnpm.js.org/) is used to install all the JavaScript dependencies.
-You could use "npm" instead, but "pnpm" is highly recommended.
 
 `--develop` will install dependencies which is only required if you want to
 make changes to the files in the `assets/` directory. Note that the
@@ -98,10 +95,10 @@ locally:
     TEST_SELENIUM=1 prove -l t/selenium-*t
 
     # Run all JavaScript tests
-    pnpm run test
+    npm run test
 
     # Run a single test and watch for changes. Useful when developing
-    pnpm run test -- --watch __tests__/md.js
+    npm run test -- --watch __tests__/md.js
 
 ## Secure connection
 
