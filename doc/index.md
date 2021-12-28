@@ -56,14 +56,14 @@ and [Svelte](https://svelte.dev/).
     <tr><th>Language</th><th>Files</th><th>Lines</th></tr>
   </thead>
   <tbody>
-    <tr><td>Perl</td>      <td>40</td>  <td>4676</td></tr>
-    <tr><td>Svelte</td>    <td>31</td>  <td>2401</td></tr>
-    <tr><td>JavaScript</td><td>35</td>  <td>2996</td></tr>
-    <tr><td>Sass</td>      <td>38</td>  <td>2761</td></tr>
+    <tr><td>Perl</td>      <td>41</td>  <td>4995</td></tr>
+    <tr><td>Svelte</td>    <td>32</td>  <td>2731</td></tr>
+    <tr><td>JavaScript</td><td>42</td>  <td>3206</td></tr>
+    <tr><td>Sass</td>      <td>52</td>  <td>4145</td></tr>
     <tr><td>SVG</td>        <td>1</td>    <td>11</td></tr>
     <tr><td>PO</td>         <td>4</td>  <td>1932</td></tr>
-    <tr><td>Total</td>     <td>117</td><td>14777</td></tr>
+    <tr><td>Total</td>     <td>117</td><td>17175</td></tr>
   </tbody>
 </table>
 
-Updated after 6.16 release, using `cloc assets/ lib/ --force-lang=CoffeeScript,svelte`
+Updated after 6.48 release, using `cloc assets/ lib/ --force-lang=CoffeeScript,svelte`
