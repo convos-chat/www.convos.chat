@@ -50,7 +50,7 @@ running](/doc/start).
 ## File uploads
 
 * [Merry Christmas and happy uploading!](/blog/2019/12/24/merry-christmas-and-happy-uploading)
-* [CONVOS_MAX_UPLOAD_SIZE](/doc/config#convos_max_upload_size)
+* [`CONVOS_MAX_UPLOAD_SIZE`](/doc/config#convos_max_upload_size)
 
 ## Forgotten password and invitation links
 
