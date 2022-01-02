@@ -65,7 +65,7 @@ by following these steps:
 
 1. Make sure Convos is stopped.
 2. Find the `connection.json` file you want to edit in your
-   [$CONVOS_HOME](./config#convos_home) directory.
+   [`$CONVOS_HOME`](./config#convos_home) directory.
 3. Use your favorite editor and edit the file. Example:
 
         $EDITOR $CONVOS_HOME/you@example.com/irc-whatever/connection.json

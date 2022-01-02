@@ -9,7 +9,7 @@ chain.
 
 ## Start Convos with correct environment variables
 
-The environment variable [CONVOS_REVERSE_PROXY](/doc/config#CONVOS_REVERSE_PROXY)
+The environment variable [`CONVOS_REVERSE_PROXY`](/doc/config#convos_reverse_proxy)
 must be set to a true value.
 
     CONVOS_REVERSE_PROXY=1 ./script/convos daemon --listen http://127.0.0.1:8080

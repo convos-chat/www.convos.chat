@@ -35,7 +35,7 @@ You can make convos listen to a variety of addresses:
     CONVOS_REVERSE_PROXY=1 ./script/convos daemon \
       --listen http://127.0.0.1:8080
 
-See [CONVOS_REVERSE_PROXY](#convos_reverse_proxy) for more details about setting
+See [`CONVOS_REVERSE_PROXY`](#convos_reverse_proxy) for more details about setting
 up Convos behind a reverse proxy.
 
 ## Environment variables
@@ -58,14 +58,14 @@ The environment variables can also be specified when you run Convos inside
 Changing an environment variable require Convos to be restarted before they
 take effect.
 
-### CONVOS_BACKEND
+### `CONVOS_BACKEND`
 
 Can be set to any class name that inherit from
 [Convos::Core::Backend](https://github.com/convos-chat/convos/blob/main/lib/Convos/Core/Backend.pm).
 
 Default: `Convos::Core::Backend::File`
 
-### CONVOS_CONNECT_DELAY
+### `CONVOS_CONNECT_DELAY`
 
 This variable decides how many seconds to wait between each user to connect
 to a chat server. The reason for this setting is that some servers will set
@@ -73,20 +73,20 @@ a permanent ban if you "flood connect".
 
 Default: `4`
 
-### CONVOS_DEBUG
+### `CONVOS_DEBUG`
 
 Setting this variable to a true value will print extra debug information to
 STDERR. Another useful debug variable is `MOJO_IRC_DEBUG` which gives you
 IRC level debug information.
 
-### CONVOS_DEFAULT_THEME and CONVOS_DEFAULT_SCHEME
+### `CONVOS_DEFAULT_THEME` and `CONVOS_DEFAULT_SCHEME`
 
 These two environment variables can be used to set the default theme for the CMS pages
 and new users.
 
-Default: CONVOS_DEFAULT_THEME=convos CONVOS_DEFAULT_SCHEME=light
+Default: `CONVOS_DEFAULT_THEME=convos CONVOS_DEFAULT_SCHEME=light`
 
-### CONVOS_HOME
+### `CONVOS_HOME`
 
 This variable is used by
 [Convos::Core::Backend::File](https://github.com/convos-chat/convos/blob/main/lib/Convos/Core/Backend/File.pm)
@@ -98,11 +98,11 @@ Default: `$HOME/.local/share/convos/`
 
 However if you are running Convos as a [snap](https://snapcraft.io/convos/), then
 `CONVOS_HOME` will be
-[SNAP_USER_COMMON](https://snapcraft.io/docs/environment-variables).
+[`SNAP_USER_COMMON`](https://snapcraft.io/docs/environment-variables).
 
 Example: `$HOME/snap/convos/common`
 
-### CONVOS_INVITE_LINK_VALID_FOR
+### `CONVOS_INVITE_LINK_VALID_FOR`
 
 This variable is used for invite and password recovery links, and specifies how
 many hours the link will be valid for. Not however that when a link is used
@@ -111,7 +111,7 @@ instantly become invalid.
 
 Default: `24`.
 
-### CONVOS_LOCAL_SECRET
+### `CONVOS_LOCAL_SECRET`
 
 This variable is used when generating invite links, but also useful for Convos
 admins who have forgotten their password. Look at "Forgotten password and
@@ -122,13 +122,13 @@ for more details.
 Default value is auto generated and available in the log output when Convos is
 started the first time.
 
-### CONVOS_LOG_FILE
+### `CONVOS_LOG_FILE`
 
 This value can be used to specify where Convos should write the log messages
 to. This settings has no default value which makes Convos write the log to
 STDERR.
 
-### CONVOS_MAX_UPLOAD_SIZE
+### `CONVOS_MAX_UPLOAD_SIZE`
 
 Set this variable to specify the max size in bytes of a file that is uploaded
 to Convos. See also the [FAQ](/doc/faq#can-convos-run-behind-behind-my-favorite-web-server),
@@ -136,14 +136,14 @@ in case your Convos installation runs behind a reverse proxy.
 
 Default: `40000000` (40MB)
 
-### CONVOS_PLUGINS
+### `CONVOS_PLUGINS`
 
 A list (comma separated) of Perl modules that can be loaded into the backend
 for optional functionality. Example
 
     CONVOS_PLUGINS=My::Cool::Plugin,My::Upload::Override ./script/convos daemon
 
-### CONVOS_REQUEST_BASE
+### `CONVOS_REQUEST_BASE`
 
 `CONVOS_REQUEST_BASE` can be used instead of `CONVOS_REVERSE_PROXY` and
 the `X-Request-Base` HTTP header set in your [web server config](/doc/faq.html).
@@ -153,7 +153,7 @@ Examples:
     CONVOS_REQUEST_BASE=https://convos.example.com/
     CONVOS_REQUEST_BASE=https://example.com/apps/convos
 
-### CONVOS_REVERSE_PROXY
+### `CONVOS_REVERSE_PROXY`
 
 The `CONVOS_REVERSE_PROXY` environment variable must be set to "1" to enable
 reverse proxy support. This will then allow Convos to automatically pick up the
@@ -163,7 +163,7 @@ reverse proxy support. This will then allow Convos to automatically pick up the
 Note that setting this environment variable without a reverse proxy in front
 will be a security issue.
 
-### CONVOS_WEBIRC_PASSWORD_NNN
+### `CONVOS_WEBIRC_PASSWORD_NNN`
 
 You can enable the WEBIRC extension by setting an environment variable per
 connection name. Example:
