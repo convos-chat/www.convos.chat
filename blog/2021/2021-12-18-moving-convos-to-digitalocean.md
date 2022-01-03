@@ -109,7 +109,6 @@ daemon.
         restart: always
         environment:
           - CONVOS_CONNECT_DELAY=4
-          - CONVOS_DEBUG=0
           - CONVOS_BOT_EMAIL=bot_nick_name@your-convos.com
           - CONVOS_DETECT_THEMES_INTERVAL=60
           - CONVOS_MAX_UPLOAD_SIZE=50000000

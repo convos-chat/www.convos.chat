@@ -71,10 +71,10 @@ command below:
 
 The command above is the same as:
 
-    CONVOS_DEBUG=1 script/convos webpack \
+    CONVOS_LOG_LEVEL=trace script/convos webpack \
       -w lib -w public/convos-api.json -w templates
 
-`CONVOS_DEBUG` will print extra low level debug information to STDERR, which is
+`CONVOS_LOG_LEVEL` will print extra low level debug information to STDERR, which is
 useful to discover bugs. The `-w` switch is for watching different files and
 directories for changes and reload the web server automatically.
 

@@ -58,6 +58,13 @@ The environment variables can also be specified when you run Convos inside
 Changing an environment variable require Convos to be restarted before they
 take effect.
 
+### `CONVOS_ACCESS_LOG`
+
+Used to control the access log format.
+See [Mojolicious::Plugin::Syslog](https://metacpan.org/pod/Mojolicious::Plugin::Syslog#register).
+
+This environment variable is currently EXPERIMENTAL.
+
 ### `CONVOS_BACKEND`
 
 Can be set to any class name that inherit from
@@ -72,12 +79,6 @@ to a chat server. The reason for this setting is that some servers will set
 a permanent ban if you "flood connect".
 
 Default: `4`
-
-### `CONVOS_DEBUG`
-
-Setting this variable to a true value will print extra debug information to
-STDERR. Another useful debug variable is `MOJO_IRC_DEBUG` which gives you
-IRC level debug information.
 
 ### `CONVOS_DEFAULT_THEME` and `CONVOS_DEFAULT_SCHEME`
 
@@ -128,6 +129,15 @@ This value can be used to specify where Convos should write the log messages
 to. This settings has no default value which makes Convos write the log to
 STDERR.
 
+### `CONVOS_LOG_LEVEL`
+
+This variable can be set to trace, debug, info, warn, error or fatal, and the
+number of log lines will increase or decrease accordingly.
+
+NOTE! Setting it to "trace" will most probably also log passwords and other
+private information though, but it can be very useful if you have to figure
+out what happens on the (IRC) protocol level.
+
 ### `CONVOS_MAX_UPLOAD_SIZE`
 
 Set this variable to specify the max size in bytes of a file that is uploaded
@@ -162,6 +172,14 @@ reverse proxy support. This will then allow Convos to automatically pick up the
 
 Note that setting this environment variable without a reverse proxy in front
 will be a security issue.
+
+### `CONVOS_SYSLOG`
+
+Used to control if Convos should log to syslog or not.
+
+Default: `No`
+
+This environment variable is currently EXPERIMENTAL.
 
 ### `CONVOS_WEBIRC_PASSWORD_NNN`
 
