@@ -52,12 +52,10 @@ If you are on macOS, you might have to install Perl and some other utilities usi
 
 ## Installing an IRC daemon
 
-It is highly suggested that you install an IRC daemon, since many networks
-will ban you if you reconnect too often. Any IRC compatible server will work,
-but [ircd](http://www.ircd-hybrid.org) is a good alternative:
-
-    sudo apt-get install ircd-hybrid # ubuntu
-    brew install ircd-hybrid         # osx
+It is highly suggested that you install an IRC daemon, since many networks will
+ban you if you reconnect too often. Any IRC compatible server will work, but
+[ergo](https://github.com/ergochat/ergo) is a modern and very simple IRC server
+to install.
 
 Please ask in [#convos on irc.libera.chat:6697](https://libera.chat/) if
 you want to use the [demo](/#instant-demo) IRC server instead of installing your own.
