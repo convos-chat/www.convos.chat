@@ -333,7 +333,7 @@ Note that the [Environment](#environment) variables should be review and changed
     # Replace any occurrence of $USER with your shell username
     Environment=CONVOS_HOME=/home/$USER/convos
     Environment=CONVOS_REVERSE_PROXY=1
-    Environment=CONVOS_LOG_FILE=/home/$USER/convos/logs
+    Environment=CONVOS_LOG_FILE=/home/$USER/convos/convos.log
     ExecStart=/path/to/convos/script/convos daemon --listen http://*:8081
     Restart=on-failure
     
