@@ -149,7 +149,7 @@ Default: `40000000` (40MB)
 ### `CONVOS_PLUGINS`
 
 A list (comma separated) of Perl modules that can be loaded into the backend
-for optional functionality. Example
+for optional functionality. Example:
 
     CONVOS_PLUGINS=My::Cool::Plugin,My::Upload::Override ./script/convos daemon
 
@@ -187,9 +187,9 @@ You can enable the WEBIRC extension by setting an environment variable per
 connection name. Example:
 
 1. You have a connection ID "irc-localhost". (Shown as "localhost" in the sidebar)
-2. Set the following environment variable to enable WEBIRC:
+2. Set the following environment variable to enable WEBIRC:  
 
-    CONVOS_WEBIRC_PASSWORD_LOCALHOST=SomeSuperSecretPassword
+        CONVOS_WEBIRC_PASSWORD_LOCALHOST=SomeSuperSecretPassword
 
 ## Global config settings
 
@@ -280,7 +280,7 @@ Use this to change your login password. Keeping the field empty will *not*
 change your password.
 
 ## Automatic startup with systemd
-
+### Globally (needs root rights)
 Here is an example systemd file, that can be placed in
 `/etc/systemd/system/convos.service`.
 
@@ -310,6 +310,43 @@ service:
     systemctl enable convos.service
     systemctl start convos.service
     systemctl status convos.service
+    
+### As a normal user
+_**NOTE**: This was tested on Ubuntu 18.04 and newer but should work on all distros that have systemd support_
+
+Here is an example of a user systemd file, that can be placed in `.config/systemd/user/convos.service`.
+
+To enable user systemd units you need to perform some extra steps, as follow:
+
+    loginctl enable-linger
+Then you need to create the `.config/systemd/user` folder mannually or using the following command:  
+    
+    systemctl --user enable systemd-tmpfiles-clean.timer && systemctl --user disable systemd-tmpfiles-clean.timer
+
+Note that the [Environment](#environment) variables should be review and changed to suit your needs.
+
+    [Unit]
+    Description=Convos User Service
+    After=network.target
+    
+    [Service]
+    # Replace any occurrence of $USER with your shell username
+    Environment=CONVOS_HOME=/home/$USER/convos
+    Environment=CONVOS_REVERSE_PROXY=1
+    Environment=CONVOS_LOG_FILE=/home/$USER/convos/logs
+    ExecStart=/path/to/convos/script/convos daemon --listen http://*:8081
+    Restart=on-failure
+    
+    [Install]
+    WantedBy=default.target
+
+After creating the file, you can run the following commands to start the
+service:
+
+    systemctl --user daemon-reload
+    systemctl --user enable convos.service
+    systemctl --user start convos.service
+    systemctl --user status convos.service
 
 Running Convos under systemd without a custom `CONVOS_LOG_FILE` will send all
 the log messages to syslog, which normally logs to `/var/log/syslog`.
