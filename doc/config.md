@@ -324,13 +324,13 @@ Then you need to create the `$HOME/.config/systemd/user` folder. You have two wa
 
 **Manually**
 
-        mkdir ~/.config
-        mkdir ~/.config/systemd
-        mkdir ~/.config/systemd/user
+    mkdir ~/.config
+    mkdir ~/.config/systemd
+    mkdir ~/.config/systemd/user
     
 **Automatically with the following command**
 
-        systemctl --user enable systemd-tmpfiles-clean.timer && systemctl --user disable systemd-tmpfiles-clean.timer
+    systemctl --user enable systemd-tmpfiles-clean.timer && systemctl --user disable systemd-tmpfiles-clean.timer
 
 Note that the [Environment](#environment) variables should be review and changed to suit your needs.
 
