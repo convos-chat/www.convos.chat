@@ -314,12 +314,12 @@ service:
 ### As a normal user
 _**NOTE**: This was tested on Ubuntu 18.04 and newer but should work on all distros that have systemd support_
 
-Here is an example of a user systemd file, that can be placed in `.config/systemd/user/convos.service`.
+Here is an example of a user systemd file, that can be placed in `$HOME/.config/systemd/user/convos.service`.
 
 To enable user systemd units you need to perform some extra steps as the user, which are the following:
 
     loginctl enable-linger
-Then you need to create the `.config/systemd/user` folder mannually or using the following command:  
+Then you need to create the `$HOME/.config/systemd/user` folder mannually or using the following command:  
     
     systemctl --user enable systemd-tmpfiles-clean.timer && systemctl --user disable systemd-tmpfiles-clean.timer
 
