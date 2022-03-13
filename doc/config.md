@@ -187,7 +187,7 @@ You can enable the WEBIRC extension by setting an environment variable per
 connection name. Example:
 
 1. You have a connection ID "irc-localhost". (Shown as "localhost" in the sidebar)
-2. Set the following environment variable to enable WEBIRC:  
+2. Set the following environment variable to enable WEBIRC:
 
         CONVOS_WEBIRC_PASSWORD_LOCALHOST=SomeSuperSecretPassword
 
@@ -316,7 +316,7 @@ _**NOTE**: This was tested on Ubuntu 18.04 and newer but should work on all dist
 
 Here is an example of a user systemd file, that can be placed in `.config/systemd/user/convos.service`.
 
-To enable user systemd units you need to perform some extra steps, as follow:
+To enable user systemd units you need to perform some extra steps as the user, which are the following:
 
     loginctl enable-linger
 Then you need to create the `.config/systemd/user` folder mannually or using the following command:  
@@ -330,10 +330,10 @@ Note that the [Environment](#environment) variables should be review and changed
     After=network.target
     
     [Service]
-    # Replace any occurrence of $USER with your shell username
-    Environment=CONVOS_HOME=/home/$USER/convos
-    Environment=CONVOS_REVERSE_PROXY=1
-    Environment=CONVOS_LOG_FILE=/home/$USER/convos/convos.log
+    # Any occurrence of `%h` will be replaced by the user $HOME
+    # Edit the paths to fit your needs (these are the default)
+    Environment=CONVOS_HOME=%h/.local/share/convos
+    Environment=CONVOS_LOG_FILE=%h/.local/share/convos/convos.log
     ExecStart=/path/to/convos/script/convos daemon --listen http://*:8081
     Restart=on-failure
     
