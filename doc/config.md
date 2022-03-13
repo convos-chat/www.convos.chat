@@ -319,9 +319,18 @@ Here is an example of a user systemd file, that can be placed in `$HOME/.config/
 To enable user systemd units you need to perform some extra steps as the user, which are the following:
 
     loginctl enable-linger
-Then you need to create the `$HOME/.config/systemd/user` folder mannually or using the following command:  
     
-    systemctl --user enable systemd-tmpfiles-clean.timer && systemctl --user disable systemd-tmpfiles-clean.timer
+Then you need to create the `$HOME/.config/systemd/user` folder. You have two ways of doing it:
+
+**Manually**
+
+        mkdir ~/.config
+        mkdir ~/.config/systemd
+        mkdir ~/.config/systemd/user
+    
+**Automatically with the following command**
+
+        systemctl --user enable systemd-tmpfiles-clean.timer && systemctl --user disable systemd-tmpfiles-clean.timer
 
 Note that the [Environment](#environment) variables should be review and changed to suit your needs.
 
