@@ -38,26 +38,9 @@ to play around and tweak the setting, you can try the command below:
 
 There are currently no plan to implement support for sending a paste to an
 external service, but that doesn't prevent you from making your own. The
-pastebin is implemented as a
-[plugin](https://github.com/convos-chat/convos/blob/main/lib/Convos/Plugin/Paste.pm),
-meaning you can create your own and load that instead.
-
-The plugin simply listens to a `multiline_message` event and creates a paste
-based on the information from the backend. Below is an alternative that post
-the paste to [ix.io](http://ix.io/):
-
-    $app->core->backend->on(multiline_message => sub {
-        my ($backend, $connection, $text, $cb) = @_;
-        $app->ua->post("http://ix.io", form => {"f:1" => $$text}, sub {
-          my ($ua, $tx) = @_;
-          my $err = $tx->error ? $tx->error->{message} : "";
-          $backend->$cb($err, $tx->res->body);
-        });
-    });
-
-The `$connection` object is there so you can get the user object, which again
-can hold authentication details for the paste service. Note that this is
-currently not implemented in the frontend, but this can of course be changed.
+pastebin is implemented as a [plugin](https://github.com/convos-chat/convos/blob/main/lib/Convos/Plugin/Paste.pm),
+meaning you can create [your own](https://github.com/convos-chat/convos/blob/main/lib/Convos/Plugin/Paste.pm#L41)
+and [load that](/doc/config#convos_plugins) instead.
 
 After all... Convos is Open Source!
 
