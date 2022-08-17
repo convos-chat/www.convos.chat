@@ -9,7 +9,7 @@ be powered by [GitHub Pages](https://pages.github.com/), but it is now
 powered by "Convos Pages" instead. The CMS support was mainly added to make
 it easier to maintain our web page, but can be used by anyone as a generic CMS.
 
-Last week we also changed the domain name from _convos.chat_ to
+Last week we also changed the domain name from _convos.by_ to
 "[convos.chat](https://convos.chat)". We did the switch because the ".by"
 domain raised questions by our users and was hard to remember.
 
