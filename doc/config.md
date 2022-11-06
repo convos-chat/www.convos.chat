@@ -280,11 +280,11 @@ Use this to change your login password. Keeping the field empty will *not*
 change your password.
 
 ## Automatic startup with systemd
-
+### With root access
 Here is an example systemd file, that can be placed in
 `/etc/systemd/system/convos.service`.
 
-Note that the [Environment](#environment) variables should be review and
+Note that the [Environment](#environment) variables should be reviewed and
 changed to suit your needs.
 
     [Unit]
@@ -303,13 +303,71 @@ changed to suit your needs.
     [Install]
     WantedBy=multi-user.target
 
-After creating the file, you can run the following commands to start the
+After creating the file, you can run the following commands to manage the
 service:
 
+    # To make systemd aware of the new service unit
     systemctl daemon-reload
+    
+    # Enable Convos to be restarted on reboot
     systemctl enable convos.service
+    
+    # Start Convos
     systemctl start convos.service
+    
+    # See current Convos status
     systemctl status convos.service
+    
+    # Stop Convos
+    systemctl stop convos.service
+
+### As a regular user
+_WARNING: This was tested on Ubuntu 18.04 and newer_
+
+Also, there's some aditional steps to enable the ability to run systemd units
+as a regular user and they are the following (replace any occurrence of `$USER`
+with your shell username):
+1. Type `loginctl enable-linger`
+2. Create the user systemd folder with `mkdir -p /home/$USER/.config/systemd/user`
+
+
+Here is an example systemd file, that can be placed in
+`/home/$USER/.config/systemd/user/convos.service`.
+
+Note that the [Environment](#environment) variables should be reviewed and
+changed to suit your needs.
+
+    [Unit]
+    Description=Convos service
+    After=default.target
+    
+    [Service]
+    Environment=CONVOS_HOME=/home/$USER/convos
+    Environment=CONVOS_REVERSE_PROXY=1
+    ExecStart=/path/to/convos/script/convos daemon --listen http://*:8081
+    Restart=on-failure
+    
+    [Install]
+    WantedBy=default.target
+
+
+After creating the file, you can run the following commands to manage the
+service:
+
+    # To make systemd aware of the new service unit
+    systemctl --user daemon-reload
+
+    # Enable Convos to be restarted on reboot
+    systemctl --user enable convos.service
+    
+    # Start Convos
+    systemctl --user start convos.service
+    
+    # See current Convos status
+    systemctl --user status convos.service
+    
+    # Stop Convos
+    systemctl --user stop convos.service
 
 Running Convos under systemd without a custom `CONVOS_LOG_FILE` will send all
 the log messages to syslog, which normally logs to `/var/log/syslog`.
