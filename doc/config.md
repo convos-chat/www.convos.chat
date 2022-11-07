@@ -280,6 +280,7 @@ Use this to change your login password. Keeping the field empty will *not*
 change your password.
 
 ## Automatic startup with systemd
+
 ### With root access
 Here is an example systemd file, that can be placed in
 `/etc/systemd/system/convos.service`.
@@ -322,14 +323,13 @@ service:
     systemctl stop convos.service
 
 ### As a regular user
-_WARNING: This was tested on Ubuntu 18.04 and newer_
+_WARNING: This was only tested on Ubuntu 18.04 and newer_
 
 Also, there's some aditional steps to enable the ability to run systemd units
 as a regular user and they are the following (replace any occurrence of `$USER`
 with your shell username):
 1. Type `loginctl enable-linger`
 2. Create the user systemd folder with `mkdir -p /home/$USER/.config/systemd/user`
-
 
 Here is an example systemd file, that can be placed in
 `/home/$USER/.config/systemd/user/convos.service`.
@@ -342,8 +342,6 @@ changed to suit your needs.
     After=default.target
     
     [Service]
-    Environment=CONVOS_HOME=/home/$USER/convos
-    Environment=CONVOS_REVERSE_PROXY=1
     ExecStart=/path/to/convos/script/convos daemon --listen http://*:8081
     Restart=on-failure
     
