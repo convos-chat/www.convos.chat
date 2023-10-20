@@ -279,6 +279,12 @@ This settings is only remembered in your current browser.
 Use this to change your login password. Keeping the field empty will *not*
 change your password.
 
+## Overriding assets/templates
+
+You can override files under `/public` and `/templates` by placing your own 
+versions under `$CONVOS_HOME/content` and matching their relative paths. See 
+[the CMS blog post](/blog/2020/6/3/content-management-system) for details.
+
 ## Automatic startup with systemd
 
 ### With root access
