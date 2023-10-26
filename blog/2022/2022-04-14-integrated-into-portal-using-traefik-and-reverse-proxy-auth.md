@@ -95,7 +95,7 @@ for completeness.
         name: portal
     services:
       convos:
-        image: convos/convos:stable
+        image: ghcr.io/convos-chat/convos:stable
         container_name: convos
         restart: always
         volumes:

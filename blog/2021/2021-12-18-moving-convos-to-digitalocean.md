@@ -104,7 +104,7 @@ daemon.
     
     services:
      convos: 
-        image: convos/convos:v6.41
+        image: ghcr.io/convos-chat/convos:v6.41
         container_name: convos
         restart: always
         environment:

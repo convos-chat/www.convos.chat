@@ -21,7 +21,7 @@ Here's my docker-compose file:
     data:
     services:
     convos:
-        image: 'convos/convos:stable'
+        image: 'ghcr.io/convos-chat/convos:stable'
         container_name: convos
         restart: unless-stopped
         ports:

@@ -79,9 +79,9 @@ above.
 
 You can use the command below to pull and run convos:
 
-    docker pull convos/convos:stable
+    docker pull ghcr.io/convos-chat/convos:stable
     mkdir -p $HOME/convos/data
-    docker run -it -p 8080:3000 -v $HOME/convos/data:/data convos/convos:stable
+    docker run -it -p 8080:3000 -v $HOME/convos/data:/data ghcr.io/convos-chat/convos:stable
 
 The last command will make Convos available on http://localhost:8080, and
 persist data in `$HOME/convos/data`.
@@ -90,7 +90,7 @@ For Linux distributions with SELinux Enforcing policy (e.g. CentOS, Fedora or RH
 
     -v $HOME/convos/data:/data:z
 
-There are some [alternative tags](https://hub.docker.com/r/convos/convos/tags)
+There are some [alternative tags](https://github.com/convos-chat/convos/pkgs/container/convos)
 available, but we suggest using the "stable" release.
 
 ### Git clone

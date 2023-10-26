@@ -28,7 +28,9 @@ Now, how do we do this ?
 4. done !
 
 ## Context
-We'll assume for this that you are running convos using the docker image over at "[convos/convos](https://hub.docker.com/r/convos/convos) and have access to the docker host or ability to mount volumes from somewhere.
+We'll assume for this that you are running convos using the docker image over
+at [convos-chat/convos](https://github.com/convos-chat/convos/pkgs/container/convos)
+and have access to the docker host or ability to mount volumes from somewhere.
 
 ## The plugin itself
 
@@ -88,7 +90,7 @@ Now stringing all together, I end up with the following compose file :
             - CONVOS_SECURE_COOKIES=true
             - CONVOS_PLUGINS=Convos::Plugin::Ix
             hostname: convos
-            image: convos/convos:stable
+            image: ghcr.io/convos-chat/convos:stable
             labels:
             traefik.http.middlewares.convos.headers.customrequestheaders.X-Forwarded-Proto: 'https'
             subdomain: convos

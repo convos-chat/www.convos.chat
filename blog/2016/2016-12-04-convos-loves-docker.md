@@ -3,7 +3,7 @@ title: Convos loves Docker
 author: Jan Henning Thorsen
 ---
 
-We now have an official [Docker](https://hub.docker.com/r/convos/convos/)
+We now have an official [Docker](https://github.com/convos-chat/convos/pkgs/container/convos)
 file for Convos! The image is based on [Alpine 3.5](https://alpinelinux.org/),
 making it very small and easy to install. You can get up and running with
 these commands:
