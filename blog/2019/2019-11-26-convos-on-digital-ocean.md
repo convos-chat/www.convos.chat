@@ -99,8 +99,8 @@ of Convos. You can check the current version number in the "Help" page.
 
 ## Got any issues or questions?
 
-If you run into any issues, then don't hesitate to as us on either
-[Twitter](https://twitter.com/convosby) or in the official support
+If you run into any issues, then don't hesitate to as us an
+[email](mailto:contact@convos.chat) or in the official support
 channel #convos on irc.libera.chat:6697.
 
 Enjoy your newly created Convos installation!

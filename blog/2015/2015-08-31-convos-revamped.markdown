@@ -221,5 +221,4 @@ follow. The idea behind using events, instead of a third party database makes
 the separation of concerns clearer.
 
 Got questions, feedback, want to contribute or just see what's going on with
-the project? Follow [Convos](http://twitter.com/convosby) on Twitter or
-join the IRC channel #convos on irc.libera.chat:6697.
+the project? Join the IRC channel #convos on irc.libera.chat:6697!
