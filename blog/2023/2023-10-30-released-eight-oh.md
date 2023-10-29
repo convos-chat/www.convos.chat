@@ -17,6 +17,15 @@ We tried to reach out to Docker to host our images for free, since we are a
 non-profit open source project, but since they never got back to us, we saw no
 other way than to move the images to Github.
 
+What does this mean for you? To get the new release, you have to make the
+following change in your Docker compose file:
+
+    -    image: convos/convos:v7.15
+    +    image: ghcr.io/convos-chat/convos:v8.02
+
+
+Instead of "v8.02", you can also use the "alpha" or "stable" tags.
+
 ## We changed the main menu
 
 In the [8.00 release](https://github.com/convos-chat/convos/blob/v8.00/Changes#L3),
