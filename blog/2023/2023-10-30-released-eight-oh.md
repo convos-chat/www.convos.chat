@@ -34,6 +34,8 @@ where you can hide servers and user settings, if you find them distracting. One
 usecase is that during work, you might want to only see relevant IRC servers,
 instead of getting distracted by other conversations.
 
+![New main menu](/screenshots/2023-10-30-main-menu.png)
+
 ## New participant list
 
 In the [8.01](https://github.com/convos-chat/convos/blob/v8.01/Changes#L3)
@@ -42,6 +44,8 @@ list. This has always been the case on small/narriw screens (aka phones), but
 we are now reusing the layout on wide screens, making it a bit easier to get to
 the conversation settings. Toggling between raw messages are now very easy, and
 readily available.
+
+![New participant list](/screenshots/2023-10-30-conversation-setings.png)
 
 ## New language support
 
