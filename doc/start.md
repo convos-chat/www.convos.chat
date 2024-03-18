@@ -57,7 +57,7 @@ or not:
 
     ./script/convos version
 
-One very useful addition is [EV](/doc/Mojolicious/lib/Mojolicious/Guides/FAQ.pod#Why-doesnt-Mojolicious-have-any-dependencies),
+One very useful addition is [EV](https://docs.mojolicious.org/Mojolicious/Guides/FAQ#Why-doesnt-Mojolicious-have-any-dependencies),
 which makes Convos faster. It can be installed with the command below:
 
     ./script/convos cpanm EV
