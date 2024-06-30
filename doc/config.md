@@ -163,6 +163,13 @@ Examples:
     CONVOS_REQUEST_BASE=https://convos.example.com/
     CONVOS_REQUEST_BASE=https://example.com/apps/convos
 
+### `MOJO_LISTEN`
+
+Used to set the address Convos should listen on. If the `--listen` argument is
+given when starting convos, that value will be used instead.
+
+Default: `http://*:3000`
+
 ### `CONVOS_REVERSE_PROXY`
 
 The `CONVOS_REVERSE_PROXY` environment variable must be set to "1" to enable
