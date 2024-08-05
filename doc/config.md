@@ -24,6 +24,10 @@ You can make convos listen to a variety of addresses:
       --listen "http://127.0.0.1:8080" \
       --listen "http://[::1]:8080"
 
+    # Listen on a UNIX Socket
+      ./script/convos daemon \
+      --listen "http+unix://%2Ftmp%2Fmyapp.sock"
+
     # Listen on HTTPS with a default untrusted certificate
     ./script/convos daemon --listen https://*:4000
     
