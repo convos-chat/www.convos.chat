@@ -327,10 +327,9 @@ Note that the [Environment](#environment) variables should be review and changed
 
     [Unit]
     Description=Convos User Service
-    After=network.target
+    After=default.target
     
     [Service]
-    # Any occurrence of `%h` will be replaced by the user $HOME
     # Edit the paths to fit your needs (these are the default)
     Environment=CONVOS_HOME=~/.local/share/convos
     Environment=CONVOS_LOG_FILE=~/.local/share/convos/convos.log
