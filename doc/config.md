@@ -293,7 +293,6 @@ changed to suit your needs.
     
     [Service]
     Environment=CONVOS_HOME=/var/convos
-    Environment=CONVOS_REVERSE_PROXY=1
     User=www
     ExecStart=/path/to/convos/script/convos daemon --listen http://*:8081
     KillMode=process
@@ -320,19 +319,11 @@ To enable user systemd units you need to perform some extra steps as the user, w
 
     loginctl enable-linger
     
-Then you need to create the `$HOME/.config/systemd/user` folder. You have two ways of doing it:
+Then you need to create the `$HOME/.config/systemd/user` folder. You can do it with the following command:
 
-**Manually**
-
-    mkdir ~/.config
-    mkdir ~/.config/systemd
-    mkdir ~/.config/systemd/user
+    mkdir -p ~/.config/systemd/user
     
-**Automatically with the following command**
-
-    systemctl --user enable systemd-tmpfiles-clean.timer && systemctl --user disable systemd-tmpfiles-clean.timer
-
-Note that the [Environment](#environment) variables should be review and changed to suit your needs.
+Note that the [Environment](#environment) variables should be review and changed to suit your needs (current ones use Convos's default paths).
 
     [Unit]
     Description=Convos User Service
@@ -341,8 +332,8 @@ Note that the [Environment](#environment) variables should be review and changed
     [Service]
     # Any occurrence of `%h` will be replaced by the user $HOME
     # Edit the paths to fit your needs (these are the default)
-    Environment=CONVOS_HOME=%h/.local/share/convos
-    Environment=CONVOS_LOG_FILE=%h/.local/share/convos/convos.log
+    Environment=CONVOS_HOME=~/.local/share/convos
+    Environment=CONVOS_LOG_FILE=~/.local/share/convos/convos.log
     ExecStart=/path/to/convos/script/convos daemon --listen http://*:8081
     Restart=on-failure
     
