@@ -304,7 +304,6 @@ changed to suit your needs.
     
     [Service]
     Environment=CONVOS_HOME=/var/convos
-    Environment=CONVOS_REVERSE_PROXY=1
     User=www
     ExecStart=/path/to/convos/script/convos daemon --listen http://*:8081
     KillMode=process
@@ -332,23 +331,23 @@ service:
     # Stop Convos
     systemctl stop convos.service
 
-### As a regular user
-_WARNING: This was only tested on Ubuntu 18.04 and newer_
+### As a normal user
+_**NOTE**: This was tested on Ubuntu 18.04 and newer but should work on all distros that have systemd support_
 
-Also, there's some aditional steps to enable the ability to run systemd units
-as a regular user and they are the following (replace any occurrence of `$USER`
-with your shell username):
-1. Type `loginctl enable-linger`
-2. Create the user systemd folder with `mkdir -p /home/$USER/.config/systemd/user`
+To enable user systemd units you need to perform some extra steps as the user, which are the following:
 
-Here is an example systemd file, that can be placed in
-`/home/$USER/.config/systemd/user/convos.service`.
+    loginctl enable-linger
+    
+Then you need to create the `$HOME/.config/systemd/user` folder. You can do it with the following command:
 
-Note that the [Environment](#environment) variables should be reviewed and
-changed to suit your needs.
+    mkdir -p ~/.config/systemd/user
+    
+Note that the [Environment](#environment) variables should be review and changed to suit your needs (current ones use Convos's default paths).
+
+Here is an example of a user systemd file, that can be placed in `~/.config/systemd/user/convos.service`:
 
     [Unit]
-    Description=Convos service
+    Description=Convos User Service
     After=default.target
     
     [Service]
