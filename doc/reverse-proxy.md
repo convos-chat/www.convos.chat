@@ -68,14 +68,14 @@ If "X-Request-Base" has a path part, then you must also add a "rewrite" rule:
 
 Here is a complete example on how to start Convos with Apache:
 
-    &lt;VirtualHost your-domain.com:80>
+    &amp;lt;VirtualHost your-domain.com:80>
       ServerAdmin admin@your-domain.com
       ServerName your-domain.com
 
-      &lt;Proxy *>
+      &amp;lt;Proxy *>
         Order allow,deny
         Allow from all
-      &lt;/Proxy>
+      &amp;lt;/Proxy>
 
       # Enable Convos to construct correct URLs by passing on custom headers.
       ProxyRequests Off
@@ -92,6 +92,4 @@ Here is a complete example on how to start Convos with Apache:
       ProxyPass /events ws://localhost:8080/events
       ProxyPass / http://localhost:8080/ keepalive=On
       ProxyPassReverse / http://localhost:8080/
-    &lt;/VirtualHost>
-
-
+    &amp;lt;/VirtualHost>
