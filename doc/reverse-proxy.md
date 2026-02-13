@@ -93,3 +93,22 @@ Here is a complete example on how to start Convos with Apache:
       ProxyPass / http://localhost:8080/ keepalive=On
       ProxyPassReverse / http://localhost:8080/
     &amp;lt;/VirtualHost>
+
+## Example Caddy Config
+
+Caddy pretty much works out of the box, but you need to set the
+"X-Request-Base" header if you're not mounting Convos at the root of your domain:
+
+    your-domain.com {
+      handle_path /subpath* {
+        reverse_proxy localhost:8080 {
+          header_up X-Request-Base {scheme}://{host}/subpath
+        }
+      }
+    }
+
+Otherwise just:
+
+    your-domain.com {
+      reverse_proxy localhost:8080
+    }
