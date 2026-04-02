@@ -193,7 +193,7 @@ connection name. Example:
 1. You have a connection ID "irc-localhost". (Shown as "localhost" in the sidebar)
 2. Set the following environment variable to enable WEBIRC:
 
-    CONVOS_WEBIRC_PASSWORD_LOCALHOST=SomeSuperSecretPassword
+        CONVOS_WEBIRC_PASSWORD_LOCALHOST=SomeSuperSecretPassword
 
 ## Global config settings
 
