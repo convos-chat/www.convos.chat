@@ -38,7 +38,7 @@ Don't know what to hack on, but interested in helping anyway? Maybe you can:
 * Improve the documentation on the official website or the Convos application.
 * Discuss how onboarding (creating a new account) could be more user friendly.
 * Create new
-  [themes](https://convos.chat/blog/2020/6/14/create-your-own-theme-detailed-walkthrough),
+  [themes](https://convos.chat/blog/2020/06/14/create-your-own-theme-detailed-walkthrough),
   or extend the set of variables to enable your theme to be built.
 
 We also have open [issues](https://github.com/convos-chat/convos/issues) and

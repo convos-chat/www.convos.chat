@@ -1,0 +1,18 @@
+/* Make Hugo's TOC match the original numbered, compact style */
+#TableOfContents ul {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+#TableOfContents ul ul {
+  list-style-type: decimal;
+}
+#TableOfContents a {
+  text-decoration: none;
+}
+#TableOfContents a:hover {
+  text-decoration: underline;
+}
+#TableOfContents li {
+  padding: 0.1rem 0;
+}

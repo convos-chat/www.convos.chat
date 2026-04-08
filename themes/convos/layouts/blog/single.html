@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+<article class="cms-main">
+  <h1 class="cms-header">{{ .Title }}</h1>
+  <div class="cms-meta">
+    <span class="cms-meta__author">Posted by
+      {{ with .Params.author }}{{ . }}{{ else }}Convos{{ end }}
+    </span>
+    on
+    <a href="{{ .Permalink }}" class="cms-meta__date">
+      {{ .Date.Format "January 2, 2006" }}
+    </a>.
+  </div>
+  {{ if .Params.toc }}{{ .TableOfContents }}{{ end }}
+  {{ .Content }}
+</article>
+{{ partial "footer.html" . }}
+{{ end }}

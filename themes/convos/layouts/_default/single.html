@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+<article class="cms-main">
+  <h1 class="cms-header">{{ .Title }}</h1>
+  {{ if .Params.toc }}{{ .TableOfContents }}{{ end }}
+  {{ .Content }}
+</article>
+{{ partial "footer.html" . }}
+{{ end }}

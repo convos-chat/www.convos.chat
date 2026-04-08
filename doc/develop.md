@@ -7,15 +7,15 @@ toc: true
 
 This guide is for people who want to hack on Convos.
 
-Not familiar with Perl? That's fine: [Half of Convos](/doc#statistics) is
+Not familiar with Go? That's fine: [Half of Convos](/doc#statistics) is
 JavaScript and CSS, so you can modify the frontend using web knowledge.
-It is however helpful if you are familiar with [git](http://git-scm.com),
-[Mojolicious](http://mojolicious.org) and basic [Perl](http://perl.org) tools,
-such as [prove](https://metacpan.org/pod/distribution/TAP-Parser/bin/prove)
-and [cpanm](https://metacpan.org/pod/distribution/App-cpanminus/bin/cpanm).
+It is however helpful if you are familiar with [git](http://git-scm.com)
+and basic [Go](https://go.dev/) tooling.
 
 The JavaScript is compiled using [rollupjs](https://rollupjs.org/) and the
-JavaScript dependency tree is maintained using [npm](https://docs.npmjs.com/).
+JavaScript dependency tree is maintained using [pnpm](https://pnpm.io).
+
+To rebuild the frontend with your changes, just do [task](https://github.com/go-task/task) build.
 
 ## Getting the source code
 
@@ -33,22 +33,11 @@ you should `cd ./convos` first.
 
 Once you have the source code you should install the dependencies:
 
-    npm i
-    ./script/convos install --develop
+    task build
 
-`--develop` will install dependencies which is only required if you want to
-make changes to the files in the `assets/` directory. Note that the
-dependencies are installed in `local/lib/`. If you want to install them
-globally or in your `$HOME/perl5` directy, then use one of these command
-instead:
-
-    ./script/cpanm --installdeps --sudo .
-    ./script/cpanm --installdeps .
-
-If you are on macOS, you might have to install Perl and some other utilities using
-[homebrew](https://brew.sh/):
-
-    brew install coreutils perl openssl
+This will build both the frontend assets (using [pnpm](https://pnpm.io)) and
+the Go binary. You will need [Go](https://go.dev/dl/),
+[Node.js](https://nodejs.org/), and [pnpm](https://pnpm.io) installed.
 
 ## Installing an IRC daemon
 
@@ -65,16 +54,10 @@ you want to use the [demo](/#instant-demo) IRC server instead of installing your
 The basics of getting the application running in development mode is the
 command below:
 
-    ./script/convos dev
+    CONVOS_MODE=development ./convos daemon
 
-The command above is the same as:
-
-    CONVOS_LOG_LEVEL=trace script/convos webpack \
-      -w lib -w public/convos-api.json -w templates
-
-`CONVOS_LOG_LEVEL` will print extra low level debug information to STDERR, which is
-useful to discover bugs. The `-w` switch is for watching different files and
-directories for changes and reload the web server automatically.
+Development mode will print extra low level debug information to STDERR, which is
+useful to discover bugs. 
 
 ## Running tests
 
@@ -82,47 +65,36 @@ Convos has [GitHub workflows](https://github.com/convos-chat/convos/actions) set
 up to run automatic tests when pushing a commit. These tests can also be run
 locally:
 
-    # Run all Perl tests (API, Core, …)
-    # (t/plugin-bot*t will be skipped without TEST_BOT=1)
-    TEST_BOT=1 prove -l
+    # Run all Go tests (API, Core, …)
+    task test
 
-    # Run a single Perl test, with verbose output
-    prove -vl t/irc-commands.t
-
-    # Run automated frontend tests in a browser
-    TEST_SELENIUM=1 prove -l t/selenium-*t
+    See the go test command for more information on running individual tests.
 
     # Run all JavaScript tests
-    npm run test
+    pnpm run test
 
     # Run a single test and watch for changes. Useful when developing
     npm run test -- --watch __tests__/md.js
 
 ## Secure connection
 
-Running `convos dev` will automatically pick up any certificated files in the
-root of your project. This can be useful if you want to work on some features
-that require "https". A self-signed certificate is often not enough, so we
-suggest using [mkcert](https://github.com/FiloSottile/mkcert) to set up local
-development certificates.
+Convos can serve HTTPS using TLS certificates. This can be useful if you want
+to work on features that require "https". A self-signed certificate is often
+not enough, so we suggest using [mkcert](https://github.com/FiloSottile/mkcert)
+to set up local development certificates.
 
 After you have installed `mkcert` you can simply run the following commands to
 get a secure connection:
 
     mkcert localhost
-    ./script/convos dev
-
-The default address for the secure server will be
-[https://localhost:3443/](localhost:3443/), but you can change that:
-
-    ./script/convos dev --listen https://localhost:8443
+    CONVOS_MODE=development ./convos daemon --listen https://localhost:3443
 
 ## Building production assets
 
 The command below will create production assets, which will be used when you
 start the [production](/doc/start#git-clone) version of Convos:
 
-    ./script/convos build
+    task build
 
 ## Directory structure
 
@@ -131,18 +103,16 @@ start the [production](/doc/start#git-clone) version of Convos:
   The [assets](https://github.com/convos-chat/convos/tree/main/assets)
   directory contains all JavaScript and Sass files, which will be used to
   generate the public files. The conversion is done with
-  [Mojolicious::Plugin::Webpack](/doc/Mojolicious/Plugin/Webpack).
+  [rollupjs](https://rollupjs.org/).
 
-* ./cpanfile
+* ./convos.go
 
-  The [cpanfile](https://github.com/convos-chat/convos/blob/main/cpanfile) is
-  used to document all the requirements, while the `Makefile.PL` file is
-  generated from the content of the cpanfile.
+  The main entrypoint for the application. Build this using `go build .`
 
-* ./lib/
+* ./pkg/
 
-  The [lib](https://github.com/convos-chat/convos/tree/main/lib) directory
-  contains all the Perl source code.
+  All the internal go packages for convos, like IRC connection and Auth 
+  modules and storage backend.
 
 * ./public
 
@@ -150,18 +120,6 @@ start the [production](/doc/start#git-clone) version of Convos:
   directory contains fonts and images  which can be downloaded through the
   Convos web server.
 
-* ./script
-
-  The [script](https://github.com/convos-chat/convos/tree/main/script)
-  directory contains the main application file
-  ([convos](https://github.com/convos-chat/convos/blob/main/script/convos))
-  and helper scripts.  The important part here is that every file which has
-  the executable bit set will be part of the final CPAN distribution.
-
-* ./t
-
-  The [t](https://github.com/convos-chat/convos/tree/main/t) directory
-  contains test files for the Perl code.
 
 * ./\_\_tests__
 
@@ -175,19 +133,12 @@ start the [production](/doc/start#git-clone) version of Convos:
     .--------._/    '------'
     | Convos |
     '--------'    .-------------.
-          \_______| Controllers |
+          \_______| Handlers    |
                   '-------------'
 
-The frontend contains of a single template. The rest of the frontend consist of
-a JavaScript application, powered by [Svelte](http://svelte.dev). This
-application gets its data from a [OpenAPI powered JSON API](/api.html powered)
-with a thin logical layer inside the controllers:
-
-* [Convos::Controller::Connection](/doc/Convos/Controller/Connection)
-* [Convos::Controller::Conversation](/doc/Convos/Controller/Conversation)
-* [Convos::Controller::Events](/doc/Convos/Controller/Events)
-* [Convos::Controller::Notifications](/doc/Convos/Controller/Notifications)
-* [Convos::Controller::User](/doc/Convos/Controller/User)
+The frontend consists of a JavaScript application powered by
+[Svelte](http://svelte.dev). This application gets its data from an
+[OpenAPI powered JSON API](/api.html) with HTTP handlers defined in `pkg/handler/`.
 
 The main layout for the Svelte powered frontend is
 [/assets/App.svelte](https://github.com/convos-chat/convos/blob/main/assets/App.svelte)
@@ -204,29 +155,23 @@ and the routes are set up in
         \_____| User |__| Connections |__| Conversation |
               '------'  '-------------'  '--------------'
 
-[Convos::Core](/doc/Convos/Core)
-is the heart of Convos. The core takes care of connections, conversations can
-persist to a backend and provide hooks for plugins.
+The `pkg/core` package is the heart of Convos. The core takes care of
+connections, conversations, and persistence.
 
-The design makes Convos a multi-user application, that can persist to any
-backend (memory, file storage, redis, ...) and connect to any chat server,
-as well as keeping any number of conversations active.
-
-The way the [backend](/doc/Convos/Core/Backend)
-is hooked into the rest of the object graph is by events. Any user, connection
-or conversation can emit new events that the Backend can choose to persist to
-storage. The default backend is a file-based backend, which enables Convos to
-be started without any external database.
+The design makes Convos a multi-user application that can connect to any IRC
+server and keep any number of conversations active. The default backend is a
+file-based backend (in `pkg/storage/`), which enables Convos to be started
+without any external database.
 
 ## API
 
-Convos has an OpenAPI powered REST API. The specification is used to both
-generate Perl code for validation, and to generate documentation. Resources:
+Convos has an OpenAPI powered REST API. The specification is used to generate
+Go server code (via [oapi-codegen](https://github.com/oapi-codegen/oapi-codegen))
+and documentation. Resources:
 
 * [Documentation](/api.html)
-* [Specification](https://github.com/convos-chat/convos/blob/main/public/convos-api.yaml)
+* [Specification](https://github.com/convos-chat/convos/blob/main/pkg/api/convos-api3.yaml)
 * [OpenAPI](https://www.openapis.org/)
-* [Mojolicious::Plugin::OpenAPI](/doc/Mojolicious/Plugin/OpenAPI)
 
 TODO: Need to document the WebSocket API as well.
 

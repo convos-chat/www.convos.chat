@@ -14,29 +14,29 @@ change to set up Convos to behave the way you want.
 You can make convos listen to a variety of addresses:
 
     # Listen on all IPv4 interfaces
-    ./script/convos daemon --listen http://*:8080
+    ./convos daemon --listen http://*:8080
 
     # Listen on all IPv4 and IPv6 interfaces
-    ./script/convos daemon --listen "http://[::]:8000"
+    ./convos daemon --listen "http://[::]:8000"
 
     # Listen on a specific IPv4 and IPv6 interface
-    ./script/convos daemon \
+    ./convos daemon \
       --listen "http://127.0.0.1:8080" \
       --listen "http://[::1]:8080"
 
     # Listen on a UNIX Socket
-      ./script/convos daemon \
+      ./convos daemon \
       --listen "http+unix://%2Ftmp%2Fmyapp.sock"
 
     # Listen on HTTPS with a default untrusted certificate
-    ./script/convos daemon --listen https://*:4000
-    
+    ./convos daemon --listen https://*:4000
+
     # Use a custom certificate and key
-    ./script/convos daemon --listen \
+    ./convos daemon --listen \
       "https://*:8000?cert=/path/to/server.crt&key=/path/to/server.key"
-    
+
     # Make convos available behind a reverse proxy
-    CONVOS_REVERSE_PROXY=1 ./script/convos daemon \
+    CONVOS_REVERSE_PROXY=1 ./convos daemon \
       --listen http://127.0.0.1:8080
 
 See [`CONVOS_REVERSE_PROXY`](#convos_reverse_proxy) for more details about setting
@@ -48,13 +48,13 @@ The following settings need to be set before starting Convos. New to shell
 environment variables? Remember to set them before the "convos" command.
 
     # Right
-    CONVOS_HOME=/var/convos ./script/convos daemon;
-    CONVOS_REVERSE_PROXY=1 ./script/convos daemon;
+    CONVOS_HOME=/var/convos ./convos daemon;
+    CONVOS_REVERSE_PROXY=1 ./convos daemon;
 
     # Wrong
     CONVOS_HOME=/var/convos;
-    ./script/convos daemon;
-    ./script/convos daemon CONVOS_REVERSE_PROXY=1;
+    ./convos daemon;
+    ./convos daemon CONVOS_REVERSE_PROXY=1;
 
 The environment variables can also be specified when you run Convos inside
 [Docker](https://docs.docker.com/compose/environment-variables/).
@@ -62,19 +62,11 @@ The environment variables can also be specified when you run Convos inside
 Changing an environment variable require Convos to be restarted before they
 take effect.
 
-### `CONVOS_ACCESS_LOG`
-
-Used to control the access log format.
-See [Mojolicious::Plugin::Syslog](https://metacpan.org/pod/Mojolicious::Plugin::Syslog#register).
-
-This environment variable is currently EXPERIMENTAL.
-
 ### `CONVOS_BACKEND`
 
-Can be set to any class name that inherit from
-[Convos::Core::Backend](https://github.com/convos-chat/convos/blob/main/lib/Convos/Core/Backend.pm).
+Currently only the file-based backend is supported.
 
-Default: `Convos::Core::Backend::File`
+Default: `File`
 
 ### `CONVOS_CONNECT_DELAY`
 
@@ -93,9 +85,8 @@ Default: `CONVOS_DEFAULT_THEME=convos CONVOS_DEFAULT_SCHEME=light`
 
 ### `CONVOS_HOME`
 
-This variable is used by
-[Convos::Core::Backend::File](https://github.com/convos-chat/convos/blob/main/lib/Convos/Core/Backend/File.pm)
-to figure out where to store settings and log files.
+This variable is used by the file backend to figure out where to store
+settings and log files.
 
 See the [FAQ](./faq) for more details.
 
@@ -150,13 +141,6 @@ in case your Convos installation runs behind a reverse proxy.
 
 Default: `40000000` (40MB)
 
-### `CONVOS_PLUGINS`
-
-A list (comma separated) of Perl modules that can be loaded into the backend
-for optional functionality. Example
-
-    CONVOS_PLUGINS=My::Cool::Plugin,My::Upload::Override ./script/convos daemon
-
 ### `CONVOS_REQUEST_BASE`
 
 `CONVOS_REQUEST_BASE` can be used instead of `CONVOS_REVERSE_PROXY` and
@@ -177,14 +161,6 @@ reverse proxy support. This will then allow Convos to automatically pick up the
 Note that setting this environment variable without a reverse proxy in front
 will be a security issue.
 
-### `CONVOS_SYSLOG`
-
-Used to control if Convos should log to syslog or not.
-
-Default: `No`
-
-This environment variable is currently EXPERIMENTAL.
-
 ### `CONVOS_WEBIRC_PASSWORD_NNN`
 
 You can enable the WEBIRC extension by setting an environment variable per
@@ -193,7 +169,7 @@ connection name. Example:
 1. You have a connection ID "irc-localhost". (Shown as "localhost" in the sidebar)
 2. Set the following environment variable to enable WEBIRC:
 
-    CONVOS_WEBIRC_PASSWORD_LOCALHOST=SomeSuperSecretPassword
+   CONVOS_WEBIRC_PASSWORD_LOCALHOST=SomeSuperSecretPassword
 
 ## Global config settings
 
@@ -217,7 +193,7 @@ be displayed on login, error and help pages.
 
 ### Default connection URL
 
-This is the default connection *new* users will connect to. The path part is
+This is the default connection _new_ users will connect to. The path part is
 the default channel to join. "%23convos" means "#convos".
 
 Changing this setting will not affect users who already registered.
@@ -230,7 +206,7 @@ than what "Default connection URL" is set to.
 ### Registration is open to public
 
 Tick this box if you want users to be able to register without an invite URL.
-If this box is *not* ticked then a Convos admin must go to "Users" in the web
+If this box is _not_ ticked then a Convos admin must go to "Users" in the web
 UI and generate an [invite URL](/blog/2019/11/24/convos-one-point-two).
 
 ## User settings
@@ -263,8 +239,8 @@ This settings is only remembered in your current browser.
 
 Choose a theme for your chat. You can also create your own themes. Look at
 "[Theming support in Convos
-4.00](/blog/2020/5/14/theming-support-in-4-point-oh)" or
-"[Create your own theme in minutes!](/blog/2020/6/14/create-your-own-theme-detailed-walkthrough)"
+4.00](/blog/2020/05/14/theming-support-in-4-point-oh)" or
+"[Create your own theme in minutes!](/blog/2020/06/14/create-your-own-theme-detailed-walkthrough)"
 for more details.
 
 This setting is only remembered inside the current browser. This is considered
@@ -280,18 +256,19 @@ This settings is only remembered in your current browser.
 
 ### Password
 
-Use this to change your login password. Keeping the field empty will *not*
+Use this to change your login password. Keeping the field empty will _not_
 change your password.
 
 ## Overriding assets/templates
 
-You can override files under `/public` and `/templates` by placing your own 
-versions under `$CONVOS_HOME/content` and matching their relative paths. See 
-[the CMS blog post](/blog/2020/6/3/content-management-system) for details.
+You can override files under `/public` and `/templates` by placing your own
+versions under `$CONVOS_HOME/content` and matching their relative paths. See
+[the CMS blog post](/blog/2020/06/03/content-management-system) for details.
 
 ## Automatic startup with systemd
 
 ### With root access
+
 Here is an example systemd file, that can be placed in
 `/etc/systemd/system/convos.service`.
 
@@ -301,15 +278,15 @@ changed to suit your needs.
     [Unit]
     Description=Convos service
     After=network.target
-    
+
     [Service]
     Environment=CONVOS_HOME=/var/convos
     User=www
-    ExecStart=/path/to/convos/script/convos daemon --listen http://*:8081
+    ExecStart=/path/to/convos daemon --listen http://*:8081
     KillMode=process
     Restart=on-failure
     SyslogIdentifier=convos
-    
+
     [Install]
     WantedBy=multi-user.target
 
@@ -318,30 +295,31 @@ service:
 
     # To make systemd aware of the new service unit
     systemctl daemon-reload
-    
+
     # Enable Convos to be restarted on reboot
     systemctl enable convos.service
-    
+
     # Start Convos
     systemctl start convos.service
-    
+
     # See current Convos status
     systemctl status convos.service
-    
+
     # Stop Convos
     systemctl stop convos.service
 
 ### As a normal user
+
 _**NOTE**: This was tested on Ubuntu 18.04 and newer but should work on all distros that have systemd support_
 
 To enable user systemd units you need to perform some extra steps as the user, which are the following:
 
     loginctl enable-linger
-    
+
 Then you need to create the `$HOME/.config/systemd/user` folder. You can do it with the following command:
 
     mkdir -p ~/.config/systemd/user
-    
+
 Note that the [Environment](#environment) variables should be review and changed to suit your needs (current ones use Convos's default paths).
 
 Here is an example of a user systemd file, that can be placed in `~/.config/systemd/user/convos.service`:
@@ -349,14 +327,13 @@ Here is an example of a user systemd file, that can be placed in `~/.config/syst
     [Unit]
     Description=Convos User Service
     After=default.target
-    
+
     [Service]
-    ExecStart=/path/to/convos/script/convos daemon --listen http://*:8081
+    ExecStart=/path/to/convos daemon --listen http://*:8081
     Restart=on-failure
-    
+
     [Install]
     WantedBy=default.target
-
 
 After creating the file, you can run the following commands to manage the
 service:
@@ -366,15 +343,15 @@ service:
 
     # Enable Convos to be restarted on reboot
     systemctl --user enable convos.service
-    
+
     # Start Convos
     systemctl --user start convos.service
-    
+
     # See current Convos status
     systemctl --user status convos.service
-    
+
     # Stop Convos
     systemctl --user stop convos.service
 
 Running Convos under systemd without a custom `CONVOS_LOG_FILE` will send all
-the log messages to syslog, which normally logs to `/var/log/syslog`.
+the log messages to journald.

@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+<main class="cms-main blog-list">
+  <h1 class="cms-header">Blog</h1>
+  {{ range .Pages.ByDate.Reverse }}
+  <section class="blog-list__item">
+    <h2>{{ .Title }}</h2>
+    <div class="cms-meta">
+      <span class="cms-meta__author">Posted by
+        {{ with .Params.author }}{{ . }}{{ else }}Convos{{ end }}
+      </span>
+      on
+      <a href="{{ .Permalink }}" class="cms-meta__date">
+        {{ .Date.Format "January 2, 2006" }}
+      </a>.
+    </div>
+    <p class="cms-excerpt">{{ .Summary }}</p>
+    <div class="cms-more"><a href="{{ .Permalink }}">Read more</a></div>
+  </section>
+  {{ end }}
+</main>
+{{ partial "footer.html" . }}
+{{ end }}

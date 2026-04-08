@@ -13,7 +13,7 @@ to make Convos fit your needs.
 The two commands below will download and start Convos:
 
     curl https://convos.chat/install.sh | sh -
-    ./convos/script/convos daemon
+    ./convos daemon
 
 That's it! After the commands above, you can point your browser to
 [http://localhost:3000](http://localhost:3000) to sign up, and start chatting.
@@ -23,13 +23,13 @@ You can invite new users to Convos, by sharing an
 
 ## Running convos
 
-    ./script/convos daemon --help
+    ./convos daemon --help
 
 The command above will provide more information about command line arguments.
 One useful switch is how to specify a listen port and make Convos bind to a
 specific address:
 
-    ./script/convos daemon --listen http://127.0.0.1:8080
+    ./convos daemon --listen http://127.0.0.1:8080
 
 See also the [configuration guide](/doc/config#listen) for more
 `--listen` options or the [FAQ](/doc/faq#can-convos-run-behind-behind-my-favorite-web-server)
@@ -42,36 +42,12 @@ before fetching the latest version, but either way a restart is required to
 load in the new version.
 
     killall convos
-    ./convos/script/convos upgrade
-    ./convos/script/convos daemon
+    cd ./convos && git pull origin stable && go build .
+    ./convos daemon
 
 See the
 [FAQ](/doc/faq#why-doesnt-convos-start-after-i-upgraded-my-system) for
 more information.
-
-## Optional modules
-
-There are some optional modules that can be installed to enhance the
-experience. The command below will show if the modules are installed
-or not:
-
-    ./script/convos version
-
-One very useful addition is [EV](https://docs.mojolicious.org/Mojolicious/Guides/FAQ#Why-doesnt-Mojolicious-have-any-dependencies),
-which makes Convos faster. It can be installed with the command below:
-
-    ./script/convos cpanm EV
-
-## Hypnotoad and Prefork
-
-It is *not* possible to run Convos with hypnotoad nor the prefork server. The
-reason for this is that the
-[Convos core](https://github.com/convos-chat/convos/blob/main/lib/Convos/Core.pm)
-requires shared memory, which a forked environment contradicts.
-
-You need to run Convos in single process, using the
-"[daemon](/doc/Mojo/Server/Daemon)" sub command shown
-above.
 
 ## Alternative install methods
 
@@ -104,15 +80,15 @@ Git can be used to get full flexibility. The command below will only clone the
     git clone https://github.com/convos-chat/convos.git \
       --branch stable --single-branch --no-tags
     cd $HOME/convos;
-    ./script/convos install
+    go build .
     
     # Start the server
-    ./script/convos daemon
+    ./convos daemon
     
     # Update and restart
     git pull origin stable
     kill $(pgrep convos)
-    ./script/convos daemon
+    ./convos daemon
 
 Using the git repo allows you to make changes and build your own frontend.
 See the [developement guide](/doc/develop) for more details.

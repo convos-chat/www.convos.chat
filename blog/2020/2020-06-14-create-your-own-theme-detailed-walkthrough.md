@@ -4,7 +4,7 @@ author: Thibault Duponchelle
 image: /screenshots/2020-06-14-hacker.png
 ---
 
-In Convos [v4.xx](/blog/2020/5/14/theming-support-in-4-point-oh.html)
+In Convos [v4.xx](/blog/2020/05/14/theming-support-in-4-point-oh.html)
 it is super easy to customize or create a theme.
 
 Follow this detailed walkthrough written by [Thibault

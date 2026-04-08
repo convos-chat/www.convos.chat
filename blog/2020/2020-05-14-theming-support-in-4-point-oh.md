@@ -4,7 +4,7 @@ author: Jan Henning Thorsen
 ---
 
 Convos 4.00 made it a lot simpler to define custom themes.
-[Previously](/blog/2019/11/2/custom-styling) you had to modify the source code
+[Previously](/blog/2019/11/02/custom-styling) you had to modify the source code
 and build your own version of Convos. This process was way to complicated and
 unnecessarily.
 

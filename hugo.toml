@@ -1,0 +1,27 @@
+baseURL = "https://convos.chat"
+title = "Convos"
+theme = "convos"
+
+[frontmatter]
+  date = ["date", ":filename", ":default"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[permalinks]
+  [permalinks.page]
+    blog = "/blog/:year/:month/:day/:slug/"
+
+[module]
+  [[module.mounts]]
+    source = "doc"
+    target = "content/doc"
+  [[module.mounts]]
+    source = "blog"
+    target = "content/blog"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "static"
+    target = "static"

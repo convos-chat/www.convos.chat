@@ -18,6 +18,7 @@ image: /screenshots/2020-05-28-convos-chat.jpg
   </header>
 </div>
 
+<article class="cms-main">
 <section class="cards">
   <a href="#instant-demo" class="cards--card">
     <i class="fas fa-eye"></i>
@@ -63,13 +64,13 @@ screen. Convos can be installed on your home server,
   <div class="cards--card">
     <i class="fas fa-video"></i>
     <h3>Video chat</h3>
-    <p>Convos let's you <a href="/blog/2020/5/23/experimental-video-support-using-webrtc">video chat</a>
+    <p>Convos let's you <a href="/blog/2020/05/23/experimental-video-support-using-webrtc">video chat</a>
       with a single person or multiple participants.</p>
   </div>
   <div class="cards--card">
     <i class="fas fa-paint-roller"></i>
     <h3>Themes</h3>
-    <p>Convos comes with a selection of <a href="/blog/2020/5/14/theming-support-in-4-point-oh">color themes</a>,
+    <p>Convos comes with a selection of <a href="/blog/2020/05/14/theming-support-in-4-point-oh">color themes</a>,
       so you can personalize it to your taste.</p>
   </div>
   <div class="cards--card">
@@ -102,6 +103,8 @@ Convos works. You might also run into the developers in the `#convos` channel.
 Note that the demo is [locked](/doc/config#force-default-connection) to the
 IRC server running on localhost. This is to prevent the server from getting
 banned from IRC networks with strict limitations.
+
+</article>
 
 <style>
 article > h1 {

@@ -4,7 +4,7 @@ author: toxic0berliner
 ---
 
 This post simply goes over the setup to extend convo's features using plugins.
-It uses uses the example of the Paste plugin [recently updated](/blog/2022/3/13/released-seven-point-oh) to make pasting into convos use the excellent [ix.io](https://ix.io/) to upload the paste in replace the irc message by a link to the content that was just sent to the paste site.
+It uses uses the example of the Paste plugin [recently updated](/blog/2022/03/13/released-seven-point-oh) to make pasting into convos use the excellent [ix.io](https://ix.io/) to upload the paste in replace the irc message by a link to the content that was just sent to the paste site.
 
 <!--more-->
 

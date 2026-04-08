@@ -17,7 +17,7 @@ Here is a short overview of an example directory structure:
 
         /home/superwoman/.local/share/convos/settings.json
 
-* [User themes](/blog/2020/5/14/theming-support-in-4-point-oh)
+* [User themes](/blog/2020/05/14/theming-support-in-4-point-oh)
 
         /home/superwoman/.local/share/convos/themes/
 
@@ -39,19 +39,9 @@ while Convos is running.
 
 ## Is Convos supported on my system?
 
-Convos runs on MacOS and all flavors of Linux, but you might have to install
-some dependencies:
-
-    # MacOS
-    brew install coreutils perl openssl
-
-    # Debian, Ubuntu
-    apt-get update
-    apt-get install gcc libio-socket-ssl-perl make openssl perl
-
-    # Redhat
-    yum update
-    yum install gcc make openssl-devel perl-core perl-io-socket-ssl
+Convos is distributed as a static binary and should work on all platform.
+If a binary is not provided for your platform, you might have to build from 
+source.
 
 ## Can Convos run behind behind my favorite web server?
 
@@ -86,47 +76,16 @@ application, such as putty, it will also kill any running instance of Convos.
 
 To prevent this, you can run this command:
 
-    nohup script/convos daemon &
+    nohup ./convos daemon &
 
 The `&` at the end will send Convos to the background. `nohup` is mostly
 optional, but is usually a good idea.
 
-## Why doesn't Convos start after I upgraded my system?
-
-You might have gotten a new version of Perl which is not compatible with the
-modules you have already installed. To fix this issue, you can try to
-re-install Convos:
-
-    # Go to where you downloaded Convos
-    cd /path/to/convos/
-    # Purge all the installed packages
-    rm -rf local/{bin,lib,man}
-    # Reinstall packages
-    ./script/cpanm -n -l $PWD/local Module::Install
-    ./script/convos install
-
-Please [contact us](/doc/#get-in-touch) if the above instructions do not work.
 
 ## Can Convos be extended and customized?
 
-Yes. Convos has a plugin system that allow you to extend and override most
-parts of Convos. Look at the [configuration](/doc/config) guide to see which
-configuration parameters that have to be set to load a plugin.
-
-The plugin system is used by Convos core. Here are some of the plugins that
-ship with Convos:
-
-* [Convos::Plugin::Auth](https://convos.chat/doc/Convos::Plugin::Auth) is used
-  to login, logout and register new users. The [LDAP](https://convos.chat/doc/Convos::Plugin::Auth::LDAP)
-  plugin can be loaded to override these methods to use LDAP as backend instead.
-* [Convos::Plugin::Bot](https://convos.chat/doc/Convos::Plugin::Bot) is a bot
-  system that ships with Convos.
-* [Convos::Plugin::Cms](https://convos.chat/doc/Convos::Plugin::Cms) is used to
-  render this web page, but can be customized to render *your* own content.
-
-There are [more](https://github.com/convos-chat/convos/tree/main/lib/Convos/Plugin)
-plugins that ship with Convos. Want to write you own? Look at the [development
-guide](/doc/develop) for how to get started.
+After the rewrite in Go, the plugin system is currently removed. The core
+functionality like bot mode and pluggable auth is still supported.
 
 ## Why can't Convos do X?
 

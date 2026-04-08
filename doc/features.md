@@ -29,12 +29,13 @@ below, but it can also be extended to cater your own needs.
 
 ## CMS
 
-* [Convos as a document and blogging service](/blog/2020/6/3/content-management-system)
+The CMS system in convos is no removed after the go rewrite. We recommend using
+a static renderer like [hugo](https://gohugo.io/)
 
 ## Developer friendly
 
 Want to contribute to Convos? The [Developement guide](/doc/develop) will get
-you up and running. The backend is written in Perl, the frontend in common web
+you up and running. The backend is written in Go, the frontend in common web
 technologies, but if you don't know either you can still contribute with
 documentation patches.
 
@@ -65,13 +66,15 @@ for a given private conversation.
 
 * [Desktop notifications for messages in a channel](/blog/2019/11/24/convos-one-point-two#desktop-notifications-for-messages-in-a-channel)
 
+Convos also supports webpush for notifications on mobile devices. Note that on ios you will need to add convos as an app on your home screen for this to work.
+
 ## On connect commands
 
-* [On connect commands](/blog/2017/1/8/version-0-99-21#on-connect-commands)
+* [On connect commands](/blog/2017/01/08/version-0-99-21#on-connect-commands)
 
 ## Pastebin
 
-* [Convos got a built in pastebin](/blog/2017/5/9/convos-has-builtin-pastebin)
+* [Convos got a built in pastebin](/blog/2017/05/09/convos-has-builtin-pastebin)
 
 ## Privacy
 
@@ -105,8 +108,8 @@ unread messages.
 
 ## Theming
 
-* [How to define custom styling for Convos](/blog/2019/11/2/custom-styling)
-* [Create your own theme in minutes!](/blog/2020/6/14/create-your-own-theme-detailed-walkthrough)
+* [How to define custom styling for Convos](/blog/2019/11/02/custom-styling)
+* [Create your own theme in minutes!](/blog/2020/06/14/create-your-own-theme-detailed-walkthrough)
 * [Default theme config](/doc/config#convos_default_theme-and-convos_default_scheme)
 
 ## Translations

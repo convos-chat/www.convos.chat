@@ -46,24 +46,7 @@ of the email type, then you can send an email to
 
 ## Statistics
 
-The backend of Convos is written in [Perl](https://www.perl.org/) and
-[Mojolicious](http://mojolicious.org/), while the frontend is written
-with [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-and [Svelte](https://svelte.dev/).
-
-<table class="table">
-  <thead>
-    <tr><th>Language</th><th>Files</th><th>Lines</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Perl</td>      <td>41</td>  <td>4995</td></tr>
-    <tr><td>Svelte</td>    <td>32</td>  <td>2731</td></tr>
-    <tr><td>JavaScript</td><td>42</td>  <td>3206</td></tr>
-    <tr><td>Sass</td>      <td>52</td>  <td>4145</td></tr>
-    <tr><td>SVG</td>        <td>1</td>    <td>11</td></tr>
-    <tr><td>PO</td>         <td>4</td>  <td>1932</td></tr>
-    <tr><td>Total</td>     <td>117</td><td>17175</td></tr>
-  </tbody>
-</table>
-
-Updated after 6.48 release, using `cloc assets/ lib/ --force-lang=CoffeeScript,svelte`
+The backend of Convos is written in [Go](https://go.dev/), while the frontend
+is written with [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+and [Svelte](https://svelte.dev/). The frontend assets are embedded into a
+single Go binary for easy deployment.
